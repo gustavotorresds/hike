@@ -322,7 +322,7 @@ header.masthead p {
 .spaces img {
   display: block;
   margin: auto;
-  width: 80%;
+  width: 40%;
 }
 
 .universities {
@@ -337,6 +337,22 @@ header.masthead p {
 
 .footnote {
   font-size: 8pt;
-  bottom: 0;
   text-align: right;
+}
+
+.footer {
+  color: white;
+  background-color: #373737;
+  text-align: right;
+}
+
+.footer p {
+  font-size: 8pt;
+  padding: 1rem;
+  margin: 0;
+}
+
+#contact {
+  padding: 5rem;
+  padding-bottom: 0.5rem;
 }
