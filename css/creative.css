@@ -166,6 +166,10 @@ header.masthead {
   background-size: cover;
 }
 
+header.masthead img {
+  height: 15vh;
+}
+
 header.masthead hr {
   margin-top: 30px;
   margin-bottom: 30px;
@@ -176,6 +180,7 @@ header.masthead h1 {
 }
 
 header.masthead p {
+  font-size: 1.5rem;
   font-weight: 1000;
 }
 
@@ -200,6 +205,11 @@ header.masthead p {
 @media (min-width: 1200px) {
   header.masthead h1 {
     font-size: 4rem;
+  }
+
+  header.masthead p {
+    font-size: 2rem;
+    line-height: 3rem;
   }
 }
 
@@ -275,6 +285,7 @@ header.masthead p {
 }
 
 .btn {
+  font-size: 12pt;
   font-weight: 700;
   text-transform: uppercase;
   border-radius: 300px;
@@ -283,7 +294,7 @@ header.masthead p {
 
 .btn-xl {
   width: 15rem;
-  padding: 1rem 2rem;
+  padding: .5rem 1rem;
 }
 
 .btn-primary {
@@ -339,7 +350,7 @@ header.masthead p {
 .universities img {
   display: block;
   margin: auto;
-  width: 50%;
+  width: 80%;
 }
 
 .footnote {
@@ -395,3 +406,17 @@ input[type=submit]:hover {
   cursor: pointer;
 }
 
+
+@media (min-width: 1200px) {
+    .btn-xl {
+      font-size: 10pt;
+      width: 12rem;
+      padding: .7rem 1rem;
+    }
+
+    .universities img {
+      display: block;
+      margin: auto;
+      width: 60%;
+    }
+}
