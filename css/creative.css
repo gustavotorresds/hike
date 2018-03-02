@@ -41,7 +41,12 @@ h6 {
 .bg-primary {
   background-color: #fc5b63 !important;
   font-size: 20pt;
-  padding: 4rem 0;
+  padding: 6rem 0;
+  line-height: 2rem;
+}
+
+.bg-primary p {
+  margin: 0;
 }
 
 .bg-dark {
@@ -356,8 +361,8 @@ header.masthead p {
 
 #contact {
   padding: 1rem;
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
   padding-bottom: 0.5rem;
 }
 
