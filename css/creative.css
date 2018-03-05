@@ -158,8 +158,8 @@ img::-moz-selection {
 }
 
 header.masthead {
-  padding-top: 5rem;
-  padding-bottom: calc(5rem - 56px);
+  padding-top: 7rem;
+  padding-bottom: calc(7rem - 56px);
   background-position: center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -181,7 +181,7 @@ header.masthead h1 {
 }
 
 header.masthead p {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: bold;
 }
 
