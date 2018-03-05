@@ -159,7 +159,7 @@ img::-moz-selection {
 
 header.masthead {
   padding-top: 5rem;
-  padding-bottom: calc(10rem - 56px);
+  padding-bottom: calc(5rem - 56px);
   background-position: center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
