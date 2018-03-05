@@ -158,7 +158,7 @@ img::-moz-selection {
 }
 
 header.masthead {
-  padding-top: 10rem;
+  padding-top: 5rem;
   padding-bottom: calc(10rem - 56px);
   background-position: center center;
   -webkit-background-size: cover;
@@ -545,7 +545,6 @@ input[type=submit]:hover {
     padding: 10px 15px;
     background-color: white;
     position: relative;
-    /*border-radius: 6px;*/
 }
 
 .timeline-content p {
