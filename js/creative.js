@@ -56,23 +56,23 @@
     distance: '0px'
   }, 300);
 
-
-  setTimeout(function(){
-    $.magnificPopup.open({
-          items:{
-              src: '#start-popup',
-              type: 'inline'
-          },
-          fixedContentPos: true,
-          fixedBgPos: true,
-          overflowY: 'auto',
-          closeBtnInside: true,
-          preloader: false,
-          midClick: true,
-          removalDelay: 300,
-          mainClass: 'mfp-fade'
-      });
-  }, 900);
+  // Uncomment this out to create pop-ups on page-load
+  // setTimeout(function(){
+  //   $.magnificPopup.open({
+  //         items:{
+  //             src: '#start-popup',
+  //             type: 'inline'
+  //         },
+  //         fixedContentPos: true,
+  //         fixedBgPos: true,
+  //         overflowY: 'auto',
+  //         closeBtnInside: true,
+  //         preloader: false,
+  //         midClick: true,
+  //         removalDelay: 300,
+  //         mainClass: 'mfp-fade'
+  //     });
+  // }, 900);
 
   $(document).on('click', '.popup-modal-dismiss', function (e) {
     e.preventDefault();
