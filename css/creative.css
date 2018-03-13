@@ -640,6 +640,10 @@ input[type=submit]:hover {
  text-transform: none;
 }
 
+#accordion button {
+  word-break: break-all;
+}
+
 #accordion .btn-link:hover {
  color: #fc5b63;
  text-decoration: none;
