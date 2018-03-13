@@ -634,3 +634,27 @@ input[type=submit]:hover {
 .mfp-fade.mfp-wrap.mfp-removing .mfp-content {
   opacity: 0;
 }
+
+#accordion .btn-link {
+ color: black;
+ text-transform: none;
+}
+
+#accordion .btn-link:hover {
+ color: #fc5b63;
+ text-decoration: none;
+}
+
+#accordion .btn-link:focus {
+ text-decoration: none;
+}
+
+#accordion .card-header {
+  background-color: white;
+  border: none;
+}
+
+#accordion .card {
+  border: none;
+  border-bottom: 1px solid rgba(0,0,0,.125);
+}
