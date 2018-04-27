@@ -41,10 +41,11 @@ h6 {
 .bg-primary {
   background-color: #fc5b63 !important;
   font-size: 20pt;
-  padding: 6rem 0;
+  padding: 8rem 0 0 0;
   line-height: 2rem;
-/*  -webkit-clip-path: polygon(0 0, 1600px 0, 1600px 87%, 0 100%);
-  clip-path: polygon(0 13%, 1600px 0, 1600px 87%, 0 100%);*/
+  height: 30rem;
+  /*-webkit-clip-path: polygon(0 0, 1600px 0, 1600px 87%, 0 100%);*/
+  clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 90%);
 }
 
 .bg-primary p {
@@ -164,7 +165,7 @@ img::-moz-selection {
 }
 
 header.masthead {
-  padding-top: 7rem;
+  padding-top: 10rem;
   padding-bottom: calc(7rem - 56px);
   background-position: center center;
   -webkit-background-size: cover;
@@ -174,8 +175,7 @@ header.masthead {
 }
 
 header.masthead img {
-  height: 15vh;
-  margin-top: 8rem;
+  height: 8rem;
 }
 
 header.masthead hr {
@@ -199,7 +199,7 @@ header.masthead p {
   header.masthead {
     height: 80vh;
     min-height: 680px;
-    padding-top: 0;
+    padding-top: 6rem;
     padding-bottom: 0;
   }
   header.masthead h1 {
@@ -220,13 +220,6 @@ header.masthead p {
 
 .service-box {
   max-width: 400px;
-}
-
-.team {
-  position: relative;
-  display: block;
-  max-width: 650px;
-  margin: 0 auto;
 }
 
 
@@ -374,35 +367,47 @@ header.masthead p {
 }
 
 #contact {
-  padding: 1rem;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  padding-bottom: 0.5rem;
+  padding: 6rem 0 .5rem;
+  clip-path: polygon(0 4%, 100% 0, 100% 100%, 0 100%);
 }
 
-input.subscription-field {
-  border: 0;
+.subscription-field {
   border-radius: 1rem;
+}
+
+.subscription-field input {
+  background: none;
+  border: 0;
+  display: inline-block;
   outline: none;
-  padding: .3rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  text-align: center;
+  margin: 0;
+  padding: 10px;
+}
+
+.subscription-field input:focus {
+  outline: none;
+}
+
+input[type=email] {
+  float: left;
+  text-indent: 20px;
+  padding-right: 110px;
   width: 100%;
 }
 
-input.subscription-field:focus {
-  outline: none;
-}
-
 input[type=submit] {
-  border-radius: 1rem;
+  border-top-right-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
   background-color: #FC5B63;
   color: white;
-  padding: .3rem;
+  display: inline-block;
   border: none;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  float: right;
+  padding-right: 20px;
+  padding-left: 20px;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 input[type=submit]:hover {
@@ -577,24 +582,25 @@ input[type=submit]:hover {
 
 #faq {
   background-color: #EEEEEE;
+  clip-path: polygon(0 4%, 100% 0, 100% 100%, 0 96%);
 }
 
 #faq h6 {
   text-decoration: underline;
 }
 
-.team img {
+#team img {
   border-radius: 50%;
-  padding: 20px 0px;
-}
-
-#team {
-  background-color: #FF9F43;
+  max-width: 150px;
+  /*box-shadow: 2px 2px 30px;*/
+  /*border: 2px solid black;*/
 }
 
 #journey {
   background-color: #0097A7;
   color: #fff;
+  clip-path: polygon(0 4%, 100% 0, 100% 100%, 0 96%);
+  padding: 8rem 0;
 }
 
 #journey h6 {
@@ -622,13 +628,6 @@ input[type=submit]:hover {
 }
 
 .admissions {
-  position: relative;
-  display: block;
-  max-width: 650px;
-  margin: 0 auto;
-}
-
-.faq {
   position: relative;
   display: block;
   max-width: 650px;
@@ -710,4 +709,15 @@ input[type=submit]:hover {
   -ms-transform: rotate(360deg);
   -o-transform: rotate(360deg);
   transform: rotate(360deg);
+}
+
+#mc-submit {
+  margin-left: 10px;
+}
+
+#mc_body {
+  background-color: white;
+  border-radius: 1.5rem;
+  padding: 0;
+  margin: 0;
 }
