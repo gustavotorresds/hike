@@ -583,11 +583,6 @@ input[type=submit]:hover {
 
 #faq {
   background-color: #EEEEEE;
-  -webkit-clip-path: polygon(0 4%, 100% 0, 100% 100%, 0 96%);
-}
-
-#faq h6 {
-  text-decoration: underline;
 }
 
 #team img {
@@ -600,7 +595,7 @@ input[type=submit]:hover {
 #journey {
   background-color: #0097A7;
   color: #fff;
-  -webkit-clip-path: polygon(0 4%, 100% 0, 100% 100%, 0 96%);
+  -webkit-clip-path: polygon(0 2%, 100% 0, 100% 100%, 0 98%);
   padding: 8rem 0;
 }
 
