@@ -368,7 +368,6 @@ header.masthead p {
 
 #contact {
   padding: 6rem 0 .5rem;
-  -webkit-clip-path: polygon(0 4%, 100% 0, 100% 100%, 0 100%);
 }
 
 .subscription-field {
