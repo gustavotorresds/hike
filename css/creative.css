@@ -45,7 +45,7 @@ h6 {
   line-height: 2rem;
   height: 30rem;
   /*-webkit-clip-path: polygon(0 0, 1600px 0, 1600px 87%, 0 100%);*/
-  clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 90%);
+  -webkit-clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 90%);
 }
 
 .bg-primary p {
@@ -368,7 +368,7 @@ header.masthead p {
 
 #contact {
   padding: 6rem 0 .5rem;
-  clip-path: polygon(0 4%, 100% 0, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 4%, 100% 0, 100% 100%, 0 100%);
 }
 
 .subscription-field {
@@ -583,7 +583,7 @@ input[type=submit]:hover {
 
 #faq {
   background-color: #EEEEEE;
-  clip-path: polygon(0 4%, 100% 0, 100% 100%, 0 96%);
+  -webkit-clip-path: polygon(0 4%, 100% 0, 100% 100%, 0 96%);
 }
 
 #faq h6 {
@@ -600,7 +600,7 @@ input[type=submit]:hover {
 #journey {
   background-color: #0097A7;
   color: #fff;
-  clip-path: polygon(0 4%, 100% 0, 100% 100%, 0 96%);
+  -webkit-clip-path: polygon(0 4%, 100% 0, 100% 100%, 0 96%);
   padding: 8rem 0;
 }
 
