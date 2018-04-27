@@ -396,6 +396,7 @@ input[type=email] {
 }
 
 input[type=submit] {
+  border-radius: 0;
   border-top-right-radius: 1.5rem;
   border-bottom-right-radius: 1.5rem;
   background-color: #FC5B63;
