@@ -588,6 +588,10 @@ input[type=submit]:hover {
   margin-top: 20px;
 }
 
+#admissions .btn-primary:hover {
+  background-color: blue;
+}
+
 .journey {
   position: relative;
   display: block;
@@ -732,4 +736,8 @@ body.modal-open > .wrap {
   min-width: 1px;
   /*height: 10px;*/
   display: inline-block;
+}
+
+.underline {
+  text-decoration: underline;
 }
