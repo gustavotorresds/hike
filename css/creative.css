@@ -5,7 +5,17 @@ html {
 }
 
 body {
-  font-family: 'Varela Round', sans-serif;
+  /*font-family: 'Varela Round', sans-serif;*/
+  /*font-family: 'Open Sans', sans-serif;*/
+  /*font-family: 'Roboto Slab', serif;*/
+  /*font-family: 'Raleway', sans-serif;*/
+  /*font-family: 'Noto Sans', sans-serif;*/
+  /*font-family: 'Titillium Web', sans-serif;*/
+  /*font-family: 'Muli', sans-serif;*/
+  /*font-family: 'Arimo', sans-serif;*/
+  /*font-family: 'Quicksand', sans-serif;*/
+  font-family: 'Roboto', sans-serif;
+  /*font-weight: 800;*/
 }
 
 hr {
@@ -29,15 +39,6 @@ a:hover {
   color: #FC5B63;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: 'Varela Round', sans-serif;
-}
-
 .bg-primary {
   background-color: #fc5b63 !important;
   font-size: 20pt;
@@ -49,13 +50,17 @@ h6 {
   -webkit-clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 95%);
 }
 
-.bg-primary h3 {
-  font-size: 25pt;
-  margin: 5rem 3rem 2rem;
+#about .description {
+  padding: 2rem 3rem 2rem;
 }
 
-.bg-primary p {
-  margin: 0;
+#about h3 {
+  font-size: 25pt;
+}
+
+#about .description p {
+  color: rgba(255, 255, 255, .8);
+  font-size: 14pt;
 }
 
 .bg-dark {
@@ -99,7 +104,6 @@ img::-moz-selection {
 #mainNav {
   /*border-bottom: 1px solid rgba(0, 0, 0, 0.8);*/
   background-color: #373737;
-  font-family: 'Varela Round', sans-serif;
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
   transition: all 0.2s;
@@ -190,9 +194,9 @@ header.masthead hr {
 }
 
 header.masthead p {
-  font-size: 1.2rem;
+  font-size: 14pt;
   font-weight: bold;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 @media (min-width: 768px) {
@@ -223,7 +227,7 @@ header.masthead p {
   }
 
   header.masthead p {
-    font-size: 2rem;
+    font-size: 18pt;
     line-height: 3rem;
   }
 }
@@ -241,7 +245,6 @@ header.masthead p {
   font-weight: 700;
   text-transform: uppercase;
   border-radius: 300px;
-  font-family: 'Varela Round', sans-serif;
 }
 
 .btn-xl {
@@ -273,8 +276,7 @@ header.masthead p {
 }
 
 .btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active {
-  color: black;
-  background-color: white !important;
+  background-color: #222;
   border-color: black;
 }
 
@@ -403,7 +405,7 @@ input[type=submit]:hover {
 }
 
 .icon-box img {
-  max-width: 120px;
+  max-width: 100px;
 }
 
 .service-icon {
@@ -552,7 +554,7 @@ input[type=submit]:hover {
 
 #journey h6 {
   font-weight: bold;
-  margin-top: 50px;
+  margin-top: 40px;
 }
 
 #journey img {
@@ -564,7 +566,7 @@ input[type=submit]:hover {
 }
 
 #journey p {
-  font-size: 11pt;
+  font-size: 12pt;
 }
 
 #admissions a {
@@ -602,12 +604,6 @@ input[type=submit]:hover {
     transition: 0.4s;
     font-size: 14pt;
 }
-
-/*@media (min-width: 992px) {
-  .accordion {
-    font-size: 14pt;
-  }
-}*/
 
 
 .accordion svg {
@@ -661,12 +657,7 @@ input[type=submit]:hover {
   margin: 0;
 }
 
-.emoji {
-  font-size: 14pt;
-}
-
 .projects {
-  /*height: 20rem;*/
   width: 100%;
   display: inline-flex;
   flex-direction: row;
@@ -675,23 +666,17 @@ input[type=submit]:hover {
 
 .project {
   background-color: rgba(0, 0, 0, 0.5);
-  height: 18rem;
-  min-width: 10rem;
+  min-width: 200px;
   margin: 1rem;
-}
-
-.project:hover {
-  cursor: pointer;
 }
 
 iframe {
   width: 100%;
   min-height: 550px;
   border: none;
-  z-index: 3000;
 }
 
-/*body.modal-open > .wrap {
+body.modal-open > .wrap {
   overflow: hidden;
   height: 100%;
 }
@@ -705,6 +690,19 @@ iframe {
 
 .modal { 
   min-height: 100%; 
-}*/
+}
 
-body.modal-open { position: fixed; }
+.project img {
+  width: 90%;
+  /*border: 1px solid pink;*/
+}
+
+.project img:hover {
+  cursor: pointer;
+}
+
+.project p {
+  font-size: 10pt;
+  line-height: 1;
+  margin: 1rem 1rem;
+}
