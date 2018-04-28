@@ -688,4 +688,5 @@ iframe {
   width: 100%;
   min-height: 550px;
   border: none;
+  z-index: 2000;
 }
