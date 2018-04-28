@@ -665,8 +665,27 @@ input[type=submit]:hover {
   font-size: 14pt;
 }
 
+.projects {
+  /*height: 20rem;*/
+  width: 100%;
+  display: inline-flex;
+  flex-direction: row;
+  overflow: scroll;
+}
+
 .project {
   background-color: rgba(0, 0, 0, 0.5);
   height: 18rem;
-  /*width: 80%;*/
+  min-width: 10rem;
+  margin: 1rem;
+}
+
+.project:hover {
+  cursor: pointer;
+}
+
+iframe {
+  width: 100%;
+  min-height: 550px;
+  border: none;
 }
