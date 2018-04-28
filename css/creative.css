@@ -690,7 +690,7 @@ iframe {
   border: none;
 }
 
-body.modal-open > .wrap {
+/*body.modal-open > .wrap {
   overflow: hidden;
   height: 100%;
 }
@@ -704,4 +704,6 @@ body.modal-open > .wrap {
 
 .modal { 
   min-height: 100%; 
-}
+}*/
+
+body.modal-open { position: fixed; }
