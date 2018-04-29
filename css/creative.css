@@ -37,7 +37,7 @@ a:hover {
 }
 
 #about {
-  -webkit-clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 95%);
+  -webkit-clip-path: polygon(0 2%, 100% 0, 100% 100%, 0 98%);
 }
 
 #about .description {
@@ -533,14 +533,12 @@ input[type=submit]:hover {
 #team img {
   border-radius: 50%;
   max-width: 150px;
-  /*box-shadow: 2px 2px 30px;*/
-  /*border: 2px solid black;*/
 }
 
 #journey {
   background-color: #0097A7;
   color: #fff;
-  -webkit-clip-path: polygon(0 2%, 100% 0, 100% 100%, 0 98%);
+  -webkit-clip-path: polygon(0 1%, 100% 0, 100% 100%, 0 99%);
   padding: 8rem 0;
 }
 
@@ -559,6 +557,12 @@ input[type=submit]:hover {
 
 #journey p {
   font-size: 12pt;
+}
+
+@media (min-width: 992px) {
+  #journey {
+    -webkit-clip-path: polygon(0 7%, 100% 0, 100% 100%, 0 93%);
+  }
 }
 
 #admissions a {
@@ -613,7 +617,6 @@ input[type=submit]:hover {
     font-size: 14pt;
 }
 
-
 .accordion svg {
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
@@ -630,12 +633,10 @@ input[type=submit]:hover {
   outline: none;
 }
 
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .accordion:hover {
     color: #fc5b63;
 }
 
-/* Style the accordion panel. Note: hidden by default */
 .panel {
     color: #333;
     padding: 0 18px;
@@ -723,7 +724,6 @@ body.modal-open > .wrap {
 
 #helper-space {
   min-width: 1px;
-  /*height: 10px;*/
   display: inline-block;
 }
 
