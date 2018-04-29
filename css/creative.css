@@ -36,24 +36,6 @@ a:hover {
   line-height: 2rem;
 }
 
-#about {
-  -webkit-clip-path: polygon(0 2%, 100% 0, 100% 100%, 0 98%);
-}
-
-#about .description {
-  padding: 2rem 3rem 2rem;
-}
-
-#about h3 {
-  font-size: 25pt;
-}
-
-#about .description p {
-  margin-top: 30px;
-  color: rgba(255, 255, 255, .9);
-  font-size: 14pt;
-}
-
 .bg-dark {
   background-color: #373737 !important;
 }
@@ -207,29 +189,6 @@ header.masthead p {
   header.masthead h1 {
     font-size: 18pt;
   }
-
-  #about {
-    -webkit-clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 90%);
-  }
-}
-
-/*@media (min-width: 1200px) {
-  header.masthead h1 {
-    font-size: 4rem;
-  }
-
-  header.masthead p {
-    font-size: 18pt;
-    line-height: 3rem;
-  }
-}*/
-
-.service-box {
-  max-width: 400px;
-}
-
-.text-primary {
-  color: #F05F40 !important;
 }
 
 .btn {
@@ -276,18 +235,84 @@ header.masthead p {
   box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.5) !important;
 }
 
-.masthead .spacing {
-  margin: 1rem;
+@media (min-width: 1200px) {
+  .btn-xl {
+    font-size: 10pt;
+    width: 12rem;
+    padding: .7rem 1rem;
+  }
 }
 
-.service-box {
-  padding: 0;
+.masthead .spacing {
+  margin: 1rem;
 }
 
 .footer {
   color: white;
   background-color: #373737;
   text-align: right;
+}
+
+#about {
+  -webkit-clip-path: polygon(0 2%, 100% 0, 100% 100%, 0 98%);
+}
+
+#about .description {
+  padding: 2rem 3rem 2rem;
+}
+
+#about h3 {
+  font-size: 25pt;
+}
+
+#about .description p {
+  margin-top: 30px;
+  color: rgba(255, 255, 255, .9);
+  font-size: 14pt;
+}
+
+.projects {
+  width: 100%;
+  display: inline-flex;
+  flex-direction: row;
+  overflow: scroll;
+}
+
+.project {
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  min-width: 200px;
+  margin: 1rem;
+}
+
+.project img {
+  width: 90%;
+}
+
+.project img:hover {
+  cursor: pointer;
+}
+
+.project p {
+  font-size: 10pt;
+  line-height: 1;
+  margin: 1rem 1rem;
+}
+
+.no-padding {
+  padding: 0;
+  margin: 0;
+}
+
+#helper-space {
+  min-width: 1px;
+  display: inline-block;
+}
+
+@media (min-width: 992px) {
+  #about {
+    -webkit-clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 90%);
+  }
 }
 
 .footer p {
@@ -350,15 +375,6 @@ input[type=submit]:hover {
   cursor: pointer;
 }
 
-
-@media (min-width: 1200px) {
-  .btn-xl {
-    font-size: 10pt;
-    width: 12rem;
-    padding: .7rem 1rem;
-  }
-}
-
 .service-icon {
   margin: 0 auto;
 }
@@ -407,39 +423,6 @@ input[type=submit]:hover {
 /* content animate out */
 .mfp-fade.mfp-wrap.mfp-removing .mfp-content {
   opacity: 0;
-}
-
-#accordion .btn-link {
- color: black;
- text-transform: none;
-}
-
-#accordion .btn-link:hover {
- color: #fff;
- text-decoration: none;
-}
-
-#accordion .btn-link:focus {
- text-decoration: none;
-}
-
-#accordion .card-header {
-  background-color: white;
-  border: none;
-}
-
-#accordion .card {
-  border: none;
-  border-bottom: 1px solid rgba(0,0,0,.125);
-}
-
-#faq {
-  background-color: #EEEEEE;
-}
-
-#team img {
-  border-radius: 50%;
-  max-width: 130px;
 }
 
 #journey {
@@ -502,6 +485,19 @@ input[type=submit]:hover {
   margin-top: 40px;
 }
 
+#faq {
+  background-color: #EEEEEE;
+}
+
+#team img {
+  border-radius: 50%;
+  max-width: 130px;
+}
+
+.question {
+  border-bottom: 1px solid #bbbbbb;
+}
+
 .accordion {
     background-color: #eee;
     color: black;
@@ -543,10 +539,6 @@ input[type=submit]:hover {
     overflow: hidden;
 }
 
-.question {
-  border-bottom: 1px solid #bbbbbb;
-}
-
 .accordion.active svg {
   -webkit-transform: rotate(360deg);
   -ms-transform: rotate(360deg);
@@ -567,66 +559,6 @@ input[type=submit]:hover {
 
 #mce-responses {
   background: none;
-}
-
-.projects {
-  width: 100%;
-  display: inline-flex;
-  flex-direction: row;
-  overflow: scroll;
-}
-
-.project {
-  border-radius: 10px;
-  background-color: rgba(0, 0, 0, 0.5);
-  min-width: 200px;
-  margin: 1rem;
-}
-
-iframe {
-  width: 100%;
-  min-height: 550px;
-  border: none;
-}
-
-body.modal-open > .wrap {
-  overflow: hidden;
-  height: 100%;
-}
-
-.modal-content, 
-.modal-dialog, 
-.modal-body { 
-  height: inherit; 
-  min-height: 100%; 
-}
-
-.modal { 
-  min-height: 100%; 
-}
-
-.project img {
-  width: 90%;
-}
-
-.project img:hover {
-  cursor: pointer;
-}
-
-.project p {
-  font-size: 10pt;
-  line-height: 1;
-  margin: 1rem 1rem;
-}
-
-.no-padding {
-  padding: 0;
-  margin: 0;
-}
-
-#helper-space {
-  min-width: 1px;
-  display: inline-block;
 }
 
 .underline {
