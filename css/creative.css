@@ -560,6 +560,10 @@ input[type=submit]:hover {
   margin: 0;
 }
 
+#mce-responses {
+  background: none;
+}
+
 .projects {
   width: 100%;
   display: inline-flex;
