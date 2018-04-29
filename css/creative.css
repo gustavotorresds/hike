@@ -284,22 +284,6 @@ header.masthead p {
   padding: 0;
 }
 
-.spaces {
-  background-color: #d9d9d9;
-}
-
-.spaces img {
-  display: block;
-  margin: auto;
-  width: 70%;
-  max-width: 18rem;
-}
-
-.footnote {
-  font-size: 8pt;
-  text-align: right;
-}
-
 .footer {
   color: white;
   background-color: #373737;
@@ -368,22 +352,6 @@ input[type=submit]:hover {
     width: 12rem;
     padding: .7rem 1rem;
   }
-
-  .universities img {
-    display: block;
-    margin: auto;
-    width: 60%;
-  }
-}
-
-.small {
-  font-size: 12pt;
-}
-
-.helper {
-  display: inline-block;
-  height: 100%;
-  vertical-align: middle;
 }
 
 .service-icon {
@@ -392,58 +360,6 @@ input[type=submit]:hover {
 
 .service-icon img {
   max-width: 110px;
-}
-
-.left {
-    left: 0;
-    text-align: right;
-}
-
-.right {
-    left: 50%;
-}
-
-.left::before {
-    content: " ";
-    height: 0;
-    position: absolute;
-    top: 22px;
-    width: 0;
-    z-index: 1;
-    right: 30px;
-    border: medium solid white;
-    border-width: 10px 0 10px 10px;
-    border-color: transparent transparent transparent white;
-}
-
-.right::before {
-    content: " ";
-    height: 0;
-    position: absolute;
-    top: 22px;
-    width: 0;
-    z-index: 1;
-    left: 30px;
-    border: medium solid white;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent white transparent transparent;
-}
-
-.right::after {
-    left: -13px;
-}
-
-  .left {
-    text-align: left;
-  }
-
-  .left::after, .right::after {
-    left: 18px;
-  }
-  
-  .right {
-    left: 0%;
-  }
 }
 
 .white-popup {
