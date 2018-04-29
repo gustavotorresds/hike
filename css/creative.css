@@ -570,7 +570,7 @@ input[type=submit]:hover {
 }
 
 #admissions p {
-  font-size: 16pt;
+  font-size: 12pt;
 }
 
 #admissions .btn-primary {
@@ -585,18 +585,10 @@ input[type=submit]:hover {
   background-color: blue;
 }
 
-.journey {
-  position: relative;
-  display: block;
-  max-width: 650px;
-  margin: 0 auto;
-}
-
-.admissions {
-  position: relative;
-  display: block;
-  max-width: 650px;
-  margin: 0 auto;
+@media (min-width: 768px) {
+  #admissions p {
+    font-size: 16pt;
+  }
 }
 
 #cta {
@@ -704,7 +696,6 @@ body.modal-open > .wrap {
 
 .project img {
   width: 90%;
-  /*border: 1px solid pink;*/
 }
 
 .project img:hover {
