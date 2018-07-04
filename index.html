@@ -15,27 +15,25 @@
 
     <!-- Custom fonts for this template -->
     <link href="vendor/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 
     <!-- Plugin CSS -->
     <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/creative.css" rel="stylesheet">
+    <link href="css/creative.min.css" rel="stylesheet">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
-
   </head>
 
   <body id="page-top">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
       <div class="container">
         <a class="navbar-brand js-scroll-trigger" href="#page-top">
-          <img id="logo-img" width="100" src="img/logo-black.png">
+          <img id="logo-img" width="100" src="img/logo-white.png">
+          <span class="hike-brand">Hike</span>
         </a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -43,60 +41,65 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#about">Sobre</a>
+              <a class="nav-link js-scroll-trigger" href="#about">Por Que a Hike</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#curso">Curso</a>
+              <a class="nav-link js-scroll-trigger" href="#testimonials">Depoimentos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#infos">Informações</a>
+              <a class="nav-link js-scroll-trigger" href="#contact">Contato</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#nois">Nóis</a>
-            </li>
-            <li id="subscribe-navbar-button" class="nav-item">
-                <a class="nav-link" mp-mode="dftl" href="https://www.mercadopago.com/mlb/checkout/start?pref_id=333068623-3615bb8c-6d43-4d2f-841f-479055b5ebf8" name="MP-payButton" target="_blank">Quero</a>
+            <li class="nav-item subscribe-button">
+                <a class="nav-link js-scroll-trigger" href="#about">Inscreva-se</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <header class="masthead text-center d-flex" id="header">
-      <div class="container my-auto">
-        <div class="row">
-          <div class="col-lg-10 mx-auto">
-            <h1 class="text-uppercase">
-              <strong>Aprenda a Construir um Site em 30 Dias</strong>
-            </h1>
-            <hr class="my-4">
-          </div>
+    <header class="masthead text-center" id="header">
+      <div class="container">
+        <!-- <div class="row">
           <div class="col-lg-8 mx-auto">
-            <p class="mb-5">Mesmo se você não tiver nenhuma experiência com programação, nosso
-            curso vai te ajudar a construir algo incrível em menos de um mês</p>
-            <!-- <a class="btn btn-primary btn-xl" href="#" data-toggle="modal" data-target="#MPModal">Quero</a> -->
-            <a class="btn btn-primary btn-xl" mp-mode="dftl" href="https://www.mercadopago.com/mlb/checkout/start?pref_id=333068623-3615bb8c-6d43-4d2f-841f-479055b5ebf8" name="MP-payButton" target="_blank">Quero</a>
+            <img class="img-fluid" src="img/logo.png">
+          </div>
+        </div> -->
+        <div class="row align-items-center">
+          <div class="col-md-7 d-none d-md-block">
+            <img class="img-fluid" src="img/hero.jpg" alt="Hero Image">
+          </div>
+          <div class="col-md-5">
+            <h1 class="mb-4">APRENDA A PROGRAMAR EM 30 DIAS</h1>
+            <p class="mb-2">Se você sempre quis aprender a programar mas não sabe por onde começar, você está no lugar certo.</p>
+            <a class="btn btn-primary btn-xl js-scroll-trigger mt-3" href="#about">Quero!</a>
           </div>
         </div>
       </div>
     </header>
 
-    <section id="about">
+    <section id="about" class="bg-primary">
       <div class="container">
         <div class="row">
           <div class="col-lg-8 mx-auto text-center">
-            <h2 class="section-heading">Construa Seu Próprio Site com a Hike 30</h2>
-            <hr class="light my-4">
-            <p id="description" class="mb-4">
-            Junte-se à <strong>Hike Academy</strong> por um mês e aprenda  sem precisar sair do conforto da sua casa. Você vai construir seu próprio website usando Meteor, uma ferramenta poderosa para construir aplicações web de forma rápida. <br><br> <strong>Em 30 dias, você vai construir e colocar no ar sua própria rede social</strong>. No final do curso, você saberá como criar sites em que usuários podem se cadastrar, adicionar fotos, seguir outras pessoas, curtir postagens e muito mais. <br><br>O curso é composto por várias aulas em vídeo que você pode assistir no seu tempo. Uma dedicação semanal de 2 a 3 horas (cerca de 15 minutos por dia) é tudo o que você precisa para completar o curso em um mês.</p>
-            <a class="btn btn-primary btn-xl" mp-mode="dftl" href="https://www.mercadopago.com/mlb/checkout/start?pref_id=333068623-3615bb8c-6d43-4d2f-841f-479055b5ebf8" name="MP-payButton" target="_blank">Começar</a>
+            <h2 class="section-heading mb-5">Em um mês, você aprenderá o essencial</h2>
+            <div class="mb-4">
+              <p>Na Hike 30, você se juntará a um dos nossos co-fundadores para um mês de aprendizado interativo online. Você aprenderá a usar as ferramentas essenciais para criar Websites robustos e, no final do curso, você terá aprendido desde criar o primeiro botão até permitir que usuários façam upload de imagens.</p>
+              
+              <p>Você aprenderá tudo isso usando o Meteor, um <span class="italic">framework</span> muito poderoso e fácil de usar.</p>
+
+              <p>Com uma dedicação de 2 a 3 horas por semana, em 30 dias você deixará de ser um iniciante e terá criado seu primeiro aplicativo Web!</p>
+            </div>
+        
+            <a class="btn btn-primary btn-xl mb-3" mp-mode="dftl" href="https://www.mercadopago.com/mlb/checkout/start?pref_id=333068623-3615bb8c-6d43-4d2f-841f-479055b5ebf8" name="MP-payButton" target="_blank">Inscreva-se</a>
+
+            <p>A próxima turma da Hike 30 terá início no dia 16/07.<br>Inscreva-se agora por R$ 249 e garanta sua vaga! :)</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Nosso Curso -->
-    <section class="bg-primary" id="curso">
+    <!-- <section class="bg-primary" id="curso">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
@@ -124,43 +127,89 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
-    <section >
-      <div class="container" id="infos">
-        <div class="text-center row align-items-center justify-content-center">
-          <div class="col-lg-8 ">
-            <div class="p-5">
-              <h2 class="display-4">O que você vai aprender</h2>
-              <br>
-              <p class="learn">Na Hike 30, você vai sair do zero e aprender na prática a construir o seu próprio site. Para isso, vamos usar JavaScript, uma das línguas de programação mais populares do mundo. Você vai aprender a implementar funcionalidades presentes em vários sites populares e todo esse conhecimento vai te dar uma boa idéia de como construir outros sites e até mesmo aplicativos para celular.</p>
+    <section id="video">
+      <div class="container">
+        <div class="row justify-content-center align-items-start text-center">
+          <div class="col-md-4 col-sm-12">
+            <div class="icon-container">
+              <img class="img-fluid icon" src="img/icons/iniciantes.png">
             </div>
-            <div class="p-5">
-              <h2 class="display-4">Nenhuma experiência necessária</h2>
-              <br>
-              <p class="learn">Construímos a Hike 30 para quem  não tem experiência alguma com programação. Percebemos que muitas pessoas sabem que precisam aprender a programar, mas se sentem intimidadas pelo quão complicado programação parece ser, pelos preços caros de cursos super longos e pelas aulas online que não ensinam a construir algo útil.  Foi pensando nessas pessoas que criamos um curso com alto custo-benefício e que ensina o passo-a-passo de como construir um site do zero.</p>
+            <h5>PARA INICIANTES</h5>
+            <p>A Hike 30 foi feito para quem está começando do zero: não se preocupe se você não sabe o que é uma linha de comando ou um <span class="italic">framework</span>!</p>
+          </div>
+          <div class="col-md-4 col-sm-12">
+            <div class="icon-container">
+              <img class="img-fluid icon" src="img/icons/duvidas.png">
             </div>
-
-            <div class="p-5">
-              <h2 class="display-4">Tempo de dedicação</h2>
-              <br>
-              <p class="learn">Nosso curso é dividido em vários tutoriais em vídeo com média de 10 minutos de duração cada. Assim, com uma dedicação de aproximadamente 3 horas semanais, você será capaz de concluir todo o curso em um mês. Caso tenha uma semana muito ocupada e não consiga terminar em menos de 30 dias, sem stress: após efetuar a compra, você tem acesso a todo o conteúdo por 6 meses.</p>
+            <h5>SUPORTE PARA DÚVIDAS</h5>
+            <p>Alguém da equipe responderá pessoalmente a qualquer dúvida que você tiver, então não se preocupe sobre ficar preso ou não saber o que fazer</p>
+          </div>
+          <div class="col-md-4 col-sm-12">
+            <div class="icon-container">
+              <img class="img-fluid icon" src="img/icons/ummes.png">
             </div>
-            <div class="text-center">
-              <a class="btn btn-primary btn-xl" mp-mode="dftl" href="https://www.mercadopago.com/mlb/checkout/start?pref_id=333068623-3615bb8c-6d43-4d2f-841f-479055b5ebf8" name="MP-payButton" target="_blank">Última Chance!</a>
+            <h5>APRENDA EM 30 DIAS</h5>
+            <p>Montamos um curso com o suficiente para que você saia construindo seus próprios projetos mas sem deixá-lo longo e cheio de detalhes.</p>
+          </div>
+        </div>
+        <div class="row mx-auto text-center justify-content-center">
+          <div class="col-lg-8">
+            <div class="embed-responsive embed-responsive-16by9 mt-5">
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/YPpD7E9ib8I?rel=0" allowfullscreen></iframe>
             </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- <section id="curriculum">
+      <div class="container text-center">
+        <div class="row">
+          <div class="col">
+            <h2 class="section-heading">Conheça o currículo</h2>
+            <a class="btn btn-secondary btn-xl" href="#">Mostrar</a>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <section id="testimonials" class="bg-secondary">
+      <div class="container text-center">
+        <h2 class="section-heading">O que os Hikers acham do curso</h2>
+        <!-- <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active"> -->
+              <div class="row justify-content-center">
+                <div class="col-lg-9">
+                  <p>Agradeço muito a vocês pela dedicação em ensinar e sempre disponíveis para solucionar qualquer dúvida que fosse. Estou ainda mais empolgado com o que aprendi e colocarei em prática em novos projetos. O trabalho de vocês está SENSACIONAL! Parabéns!</p>
+                  <img class="rounded-circle" src="img/testimonials/pim.jpeg">
+                  <p>Guilherme Pim</p>
+                </div>
+              </div>
+            <!-- </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>         -->
+        <a class="btn btn-primary btn-xl mt-5 mb-3" mp-mode="dftl" href="https://www.mercadopago.com/mlb/checkout/start?pref_id=333068623-3615bb8c-6d43-4d2f-841f-479055b5ebf8" name="MP-payButton" target="_blank">Inscreva-se</a>
+        <p class="text-white">Inscreva-se agora para a próxima turma por R$249. Início em 16/07! </p>
+      </div>
+    </section>
+
     <!-- Team -->
-    <section class="bg-light infos" id="nois">
+    <section class="bg-light infos" id="team">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
             <h2 class="section-heading">Nóis</h2>
-            <hr class="my-4">
           </div>
         </div>
         <div class="row">
@@ -204,14 +253,14 @@
                 </a>
               </ul>
               <p class="text-muted">Vendas</p>
-              <p>Cresceu no interior de Minas e passou em 7 universidades americanas. Hoje estuda Ciências da Computação em Harvard, mas nós achamos que a maior conquista dele na verdade foi <a href="https://globoplay.globo.com/v/4994219/" target="_blank">ter ido no Faustão</a>.</p>
+              <p>Cresceu no interior de Minas e passou em 7 universidades americanas. Hoje estuda Ciências da Computação em Harvard, mas nós achamos que a maior conquista dele na verdade foi ter ido no Faustão.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="bg-secondary text-white" id="contact">
+    <section class="bg-dark text-white" id="contact">
       <div class="container text-center">
         <div class="row mb-4">
           <div class="col-lg-8 mx-auto text-center justify-content-center">
@@ -249,7 +298,7 @@
       </div>
     </section>
 
-    <footer class="bg-secondary footer">
+    <footer class="bg-dark footer">
         <p id="credits">© 2018 Hike Academy</p>
     </footer>
     
@@ -267,7 +316,7 @@
     </script>
 
     <!-- Custom scripts for this template -->
-    <script src="js/creative.js"></script>
+    <script src="js/creative.min.js"></script>
 
   </body>
 </html>

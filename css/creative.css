@@ -54,7 +54,7 @@ h6 {
   clip-path: polygon(0 0,100% 0,100% 100%,0 95%);
 }
 
-#curso {
+#about {
   -webkit-clip-path: polygon(0 5%,100% 0,100% 100%,0 95%);
   clip-path: polygon(0% 5%, 100% 0,100% 100%,0 95%);
 }
@@ -65,9 +65,9 @@ h6 {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
   }
 
-  #curso {
-    -webkit-clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 90%);
-    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 90%);
+  #about {
+    -webkit-clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 95%);
+    clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 95%);
   }
 }
 
@@ -96,11 +96,6 @@ h6 {
 }
 .subscription-field {
   border-radius: 1rem;
-}
-
-#subscribe-navbar-button {
-  background-color: transparent;
-  border-radius: 20px;
 }
 
 input:-webkit-autofill {
@@ -139,11 +134,12 @@ input[type=submit]:hover {
 }
 
 .bg-primary {
-  background-color: #f76c6c !important;
+  background-color: #3498db !important;
+  color: white;
 }
 
 .bg-secondary {
-  background-color: #373737 !important;
+  background-color: #f29559 !important;
 }
 
 .bg-dark {
@@ -187,7 +183,6 @@ img::-moz-selection {
 
 #mainNav {
   border-bottom: 1px solid rgba(33, 37, 41, 0.1);
-  background-color: #fff;
   font-family: 'Varela Round';
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
@@ -197,12 +192,15 @@ img::-moz-selection {
 #mainNav .navbar-brand {
   font-weight: 700;
   text-transform: uppercase;
-  color: #F05F40;
   font-family: 'Varela Round';
 }
 
+#mainNav .navbar-brand img {
+  display: none;
+}
+
 #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
-  color: #f05f40;
+  color: #3498db;
 }
 
 #mainNav .navbar-nav > li.nav-item > a.nav-link,
@@ -210,23 +208,18 @@ img::-moz-selection {
   font-size: .9rem;
   font-weight: 700;
   text-transform: uppercase;
-  color: black;
+  color: white;
+  text-align: center;
 }
 
 #mainNav .navbar-nav > li.nav-item > a.nav-link:hover,
 #mainNav .navbar-nav > li.nav-item > a.nav-link:focus:hover {
-  color: #F05F40;
+  color: #3498db;
 }
 
-#mainNav .navbar-nav > li.nav-item > a.nav-link.active,
-#mainNav .navbar-nav > li.nav-item > a.nav-link:focus.active {
-  color: #F05F40 !important;
-  background-color: transparent;
-}
-
-#mainNav .navbar-nav > li.nav-item > a.nav-link.active:hover,
-#mainNav .navbar-nav > li.nav-item > a.nav-link:focus.active:hover {
-  background-color: transparent;
+.subscribe-button {
+  border: 1px solid white;
+  border-radius: 50px;
 }
 
 #navbar-logo {
@@ -237,10 +230,15 @@ img::-moz-selection {
 @media (min-width: 992px) {
   #mainNav {
     border-color: transparent;
-    background-color: transparent;
   }
   #mainNav .navbar-brand {
     color: rgba(255, 255, 255, 0.7);
+  }
+  #mainNav .navbar-brand img {
+    display: inline-block;
+  }
+  #mainNav .navbar-brand .hike-brand {
+    display: none;
   }
   #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
     color: #fff;
@@ -250,21 +248,11 @@ img::-moz-selection {
   }
   #mainNav .navbar-nav > li.nav-item > a.nav-link,
   #mainNav .navbar-nav > li.nav-item > a.nav-link:focus {
-    color: black;
+    color: white;
   }
   #mainNav .navbar-nav > li.nav-item > a.nav-link:hover,
   #mainNav .navbar-nav > li.nav-item > a.nav-link:focus:hover {
-    color: white;
-  }
-  #mainNav.navbar-shrink {
-    border-bottom: 1px solid rgba(33, 37, 41, 0.1);
-    background-color: #373737;
-  }
-  #mainNav.navbar-shrink .navbar-brand {
-    color: #F05F40;
-  }
-  #mainNav.navbar-shrink .navbar-brand:focus, #mainNav.navbar-shrink .navbar-brand:hover {
-    color: #f05f40;
+    color: #3498db;
   }
   #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link,
   #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link:focus {
@@ -272,14 +260,13 @@ img::-moz-selection {
   }
   #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link:hover,
   #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link:focus:hover {
-    color: #F05F40;
+    color: #3498db;
   }
 }
 
 header.masthead {
-  padding-top: 10rem;
-  padding-bottom: calc(10rem - 56px);
-  background-color: #a8d0e6;
+  padding-top: 8rem;
+  padding-bottom: calc(6rem - 56px);
   /*background-image: url("../img/header.jpg");*/
   background-position: center center;
   -webkit-background-size: cover;
@@ -296,100 +283,35 @@ header.masthead hr {
 /*header text*/
 header.masthead h1 {
   font-size: 2rem;
+  font-weight: bold;
 }
 
 header.masthead p {
-  font-weight: 300;
+  color: #666666;
 }
 
 @media (min-width: 768px) {
+  header.masthead {
+    padding-top: 12rem;
+    min-height: 600px;
+  }
+  header.masthead h1 {
+    font-size: 1.5rem;
+  }
   header.masthead p {
-    font-size: 1.15rem;
+    font-size: 1.2rem;
   }
 }
 
 @media (min-width: 992px) {
   header.masthead {
-    height: 100vh;
-    min-height: 650px;
-    padding-top: 0;
-    padding-bottom: 0;
+    min-height: 730px;
   }
   header.masthead h1 {
-    font-size: 3rem;
+    font-size: 1.5rem;
   }
-}
-
-@media (min-width: 1200px) {
-  header.masthead h1 {
-    font-size: 4rem;
-  }
-}
-
-.service-box {
-  max-width: 400px;
-}
-
-.portfolio-box {
-  position: relative;
-  display: block;
-  max-width: 650px;
-  margin: 0 auto;
-}
-
-.portfolio-box .portfolio-box-caption {
-  position: absolute;
-  bottom: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  opacity: 0;
-  color: #fff;
-  background: rgba(240, 95, 64, 0.9);
-  -webkit-transition: all 0.2s;
-  -moz-transition: all 0.2s;
-  transition: all 0.2s;
-}
-
-.portfolio-box .portfolio-box-caption .portfolio-box-caption-content {
-  position: absolute;
-  top: 50%;
-  width: 100%;
-  transform: translateY(-50%);
-  text-align: center;
-}
-
-.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category,
-.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
-  padding: 0 15px;
-  font-family: 'Varela Round';
-}
-
-.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
-  font-size: 14px;
-  font-weight: 600;
-  text-transform: uppercase;
-}
-
-.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
-  font-size: 18px;
-}
-
-.portfolio-box:hover .portfolio-box-caption {
-  opacity: 1;
-}
-
-.portfolio-box:focus {
-  outline: none;
-}
-
-@media (min-width: 768px) {
-  .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
-    font-size: 16px;
-  }
-  .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
-    font-size: 22px;
+  header.masthead p {
+    font-size: 1.2rem;
   }
 }
 
@@ -404,10 +326,11 @@ header.masthead p {
   border: none;
   border-radius: 300px;
   font-family: 'Varela Round';
+  font-size: 15pt;
 }
 
 .btn-xl {
-  padding: 1rem 2rem;
+  padding: .8rem 4rem;
 }
 
 /*botao "quero"*/
@@ -424,6 +347,11 @@ header.masthead p {
 
 .btn-primary:active, .btn-primary:focus {
   box-shadow: 0 0 0 0.2rem rgba(240, 95, 64, 0.5) !important;
+}
+
+.btn-secondary {
+  background-color: #3498db;
+  color: white;
 }
 
 .timeline {
@@ -612,15 +540,18 @@ header.masthead p {
   }
 }
 
+#team {
+  padding: 2rem;
+}
+
 .team-member {
   margin-bottom: 50px;
   text-align: center;
 }
 
 .team-member img {
-  width: 225px;
-  height: 225px;
-  border: 7px solid #fff;
+  width: 100px;
+  height: 100px;
 }
 
 .team-member h4 {
@@ -636,4 +567,39 @@ header.masthead p {
 #credits {
   margin: 0;
   padding-bottom: 15px;
+}
+
+#curriculum {
+  background-image: url("../img/curriculum/blurred-background.png");
+  background-color: #F3F3F3;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#curriculum .section-heading {
+  margin-bottom: 70px;
+}
+
+#testimonials {
+  padding: 2rem;
+}
+
+#testimonials img {
+  width: 50px;
+}
+
+#testimonials h2 {
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.icon {
+  max-width: 100px;
+  margin: 20px;
 }
