@@ -2,11 +2,20 @@
 <html lang="en">
 
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121864882-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-121864882-1');
+    </script>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Se você sempre quis aprender a programar mas não sabe por onde começar, você está no lugar certo.">
+    <meta name="author" content="Hike Academy">
 
     <title>Hike Academy</title>
 
@@ -20,17 +29,19 @@
     <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/creative.min.css" rel="stylesheet">
+    <link href="css/creative.css" rel="stylesheet">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+
+    <link rel="shortcut icon" type="image/x-icon" href="icon.ico" />
   </head>
 
   <body id="page-top">
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-      <div class="container">
+      
         <a class="navbar-brand js-scroll-trigger" href="#page-top">
           <img id="logo-img" width="100" src="img/logo-white.png">
           <span class="hike-brand">Hike</span>
@@ -50,28 +61,87 @@
               <a class="nav-link js-scroll-trigger" href="#contact">Contato</a>
             </li>
             <li class="nav-item subscribe-button">
-                <a class="nav-link js-scroll-trigger" href="#about">Inscreva-se</a>
+                <a class="nav-link js-scroll-trigger" href="#" data-toggle="modal" data-target="#signupModal">Inscreva-se</a>
             </li>
           </ul>
         </div>
-      </div>
     </nav>
 
-    <header class="masthead text-center" id="header">
-      <div class="container">
+    <!-- Modal -->
+    <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="signupModalTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="signupModalLongTitle">Quero ser Hiker</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!-- Begin MailChimp Signup Form -->
+            <div id="mc-hike-signup">
+              <form action="https://hikeacademy.us17.list-manage.com/subscribe/post-json?u=5bfcd8d110b98b14d9ca89ce3&amp;id=e9773b005f" method="post" id="signup-form" name="mc-embedded-subscribe-form" class="validate mb-4" novalidate>
+                <div>
+                  <!-- <div class="indicates-required"><span class="asterisk">*</span> indica campo obrigatório</div> -->
+                  <div class="mc-field-group form-group">
+                    <label for="mce-EMAIL">Email*</label>
+                    <input type="email" value="" name="EMAIL" class="required email form-control" id="mce-EMAIL" placeholder="fulana@hikeacademy.com.br">
+                  </div>
+                  <div class="mc-field-group form-group">
+                    <label for="mce-FNAME">Nome*</label>
+                    <input type="text" value="" name="FNAME" class="form-control" id="mce-FNAME" placeholder="Fulana de Tal">
+                  </div>
+                  <div class="mc-field-group form-group">
+                    <label for="mce-PHONE">WhatsApp*</label>
+                    <input type="tel" name="PHONE" class="form-control" value="" id="mce-PHONE" placeholder="(11) 91234-5678">
+                  </div>
+                  <div class="mc-field-group mt-4 mb-4">
+                    <strong>Quero aprender a programar para:*</strong>
+                    <div class="form-check"><input type="radio" class="form-check-input" value="Usar no meu trabalho" name="INTEREST" id="mce-INTEREST-0"><label class="form-check-label" for="mce-INTEREST-0">Usar no meu trabalho</label></div>
+                    <div class="form-check"><input type="radio" class="form-check-input" value="Impulsionar carreira" name="INTEREST" id="mce-INTEREST-1"><label class="form-check-label" for="mce-INTEREST-1">Impulsionar carreira</label></div>
+                    <div class="form-check"><input type="radio" class="form-check-input" value="Usar na faculdade" name="INTEREST" id="mce-INTEREST-2"><label class="form-check-label" for="mce-INTEREST-2">Usar na faculdade</label></div>
+                    <div class="form-check"><input type="radio" class="form-check-input" value="Construir ideia própria" name="INTEREST" id="mce-INTEREST-3"><label class="form-check-label" for="mce-INTEREST-3">Construir ideia própria</label></div>
+                    <div class="form-check"><input type="radio" class="form-check-input" value="Desenvolver raciocínio" name="INTEREST" id="mce-INTEREST-4"><label class="form-check-label" for="mce-INTEREST-4">Desenvolver raciocínio</label></div>
+                    <div class="form-check"><input type="radio" class="form-check-input" value="Por curiosidade" name="INTEREST" id="mce-INTEREST-5"><label class="form-check-label" for="mce-INTEREST-5">Por curiosidade</label></div>
+                    <div class="form-check"><input type="radio" class="form-check-input" value="Outro" name="INTEREST" id="mce-INTEREST-6"><label for="mce-INTEREST-6" class="form-check-label">Outro</label></div>
+                  </div>
+                  <!-- <div id="mce-responses" class="clear">
+                    <div class="response" id="mce-error-response" style="display:none"></div>
+                    <div class="response" id="mce-success-response" style="display:none"></div>
+                  </div> -->    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                  <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_5bfcd8d110b98b14d9ca89ce3_e9773b005f" tabindex="-1" value=""></div>
+                  <div class="text-center"><input type="submit" value="Enviar" name="subscribe" id="mc-embedded-subscribe" class="btn btn-primary btn-block"></div>
+                </div>
+              </form>
+            </div>
+            <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='INTEREST';ftypes[5]='radio';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+            <!--End mc_embed_signup-->
+            <div id="signup-success" class="text-center">
+              <i class="fa fa-check-circle-o"></i>
+              <p class="mt-3">Obrigado pela inscrição! Mandaremos e-mail para você em breve com informações sobre os próximos passos para se juntar à Hike :)</p>
+            </div>
+            <div id="signup-info" class="text-center">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <header class="masthead" id="header">
+      <div class="container-fluid text-center">
         <!-- <div class="row">
           <div class="col-lg-8 mx-auto">
             <img class="img-fluid" src="img/logo.png">
           </div>
         </div> -->
-        <div class="row align-items-center">
-          <div class="col-md-7 d-none d-md-block">
-            <img class="img-fluid" src="img/hero.jpg" alt="Hero Image">
-          </div>
-          <div class="col-md-5">
+        <div class="row justify-content-around align-items-center">
+          <div class="col-md-4">
             <h1 class="mb-4">APRENDA A PROGRAMAR EM 30 DIAS</h1>
             <p class="mb-2">Se você sempre quis aprender a programar mas não sabe por onde começar, você está no lugar certo.</p>
-            <a class="btn btn-primary btn-xl js-scroll-trigger mt-3" href="#about">Quero!</a>
+            <a class="btn btn-primary btn-xl btn-block js-scroll-trigger mt-3" href="#" data-toggle="modal" data-target="#signupModal">Quero!</a>
+          </div>
+          <div class="col-md-5 d-none d-md-block">
+            <img class="img-fluid" src="img/hero2.jpg" alt="Hero Image">
           </div>
         </div>
       </div>
@@ -81,18 +151,16 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-8 mx-auto text-center">
-            <h2 class="section-heading mb-5">Em um mês, você aprenderá o essencial</h2>
+            <h2 class="section-heading text-uppercase mb-5">Em um mês, você aprenderá o essencial</h2>
             <div class="mb-4">
-              <p>Na Hike 30, você se juntará a um dos nossos co-fundadores para um mês de aprendizado interativo online. Você aprenderá a usar as ferramentas essenciais para criar Websites robustos e, no final do curso, você terá aprendido desde criar o primeiro botão até permitir que usuários façam upload de imagens.</p>
+              <p>Na Hike 30, você se juntará a um dos nossos co-fundadores para um mês de aprendizado interativo online. Você aprenderá a usar as ferramentas necessárias para criar aplicativos Web robustos e, no final do curso, terá aprendido desde criar o primeiro botão até a armazenar imagens em um servidor e colocar seu site no ar!</p>
               
               <p>Você aprenderá tudo isso usando o Meteor, um <span class="italic">framework</span> muito poderoso e fácil de usar.</p>
 
-              <p>Com uma dedicação de 2 a 3 horas por semana, em 30 dias você deixará de ser um iniciante e terá criado seu primeiro aplicativo Web!</p>
+              <p>Com uma dedicação de 2 a 3 horas por semana, em 30 dias você deixará de ser um iniciante e terá aprendido a criar seus próprios Websites!</p>
             </div>
-        
-            <a class="btn btn-primary btn-xl mb-3" mp-mode="dftl" href="https://www.mercadopago.com/mlb/checkout/start?pref_id=333068623-3615bb8c-6d43-4d2f-841f-479055b5ebf8" name="MP-payButton" target="_blank">Inscreva-se</a>
 
-            <p>A próxima turma da Hike 30 terá início no dia 16/07.<br>Inscreva-se agora por R$ 249 e garanta sua vaga! :)</p>
+            <a class="btn btn-primary btn-xl mt-5 mb-3" href="#" data-toggle="modal" data-target="#signupModal">Inscreva-se</a>
           </div>
         </div>
       </div>
@@ -131,17 +199,25 @@
 
     <section id="video">
       <div class="container">
+        <div class="row mx-auto text-center justify-content-center">
+          <div class="col-lg-8">
+            <h2 class="section-heading text-uppercase mb-5">CONHEÇA O PROGRAMA</h2>
+            <div class="embed-responsive embed-responsive-16by9 mb-5">
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Al15IUHqcEQ?rel=0" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
         <div class="row justify-content-center align-items-start text-center">
           <div class="col-md-4 col-sm-12">
             <div class="icon-container">
               <img class="img-fluid icon" src="img/icons/iniciantes.png">
             </div>
             <h5>PARA INICIANTES</h5>
-            <p>A Hike 30 foi feito para quem está começando do zero: não se preocupe se você não sabe o que é uma linha de comando ou um <span class="italic">framework</span>!</p>
+            <p>A Hike 30 foi feita para quem está começando do zero: não se preocupe se você não sabe o que é uma linha de comando ou um <span class="italic">framework</span>!</p>
           </div>
           <div class="col-md-4 col-sm-12">
             <div class="icon-container">
-              <img class="img-fluid icon" src="img/icons/duvidas.png">
+              <img class="img-fluid icon" src="img/icons/forum.png">
             </div>
             <h5>SUPORTE PARA DÚVIDAS</h5>
             <p>Alguém da equipe responderá pessoalmente a qualquer dúvida que você tiver, então não se preocupe sobre ficar preso ou não saber o que fazer</p>
@@ -154,11 +230,20 @@
             <p>Montamos um curso com o suficiente para que você saia construindo seus próprios projetos mas sem deixá-lo longo e cheio de detalhes.</p>
           </div>
         </div>
-        <div class="row mx-auto text-center justify-content-center">
-          <div class="col-lg-8">
-            <div class="embed-responsive embed-responsive-16by9 mt-5">
-              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/YPpD7E9ib8I?rel=0" allowfullscreen></iframe>
-            </div>
+      </div>
+    </section>
+
+    <section id="instructor">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-5 text-center">
+            <h2 class="text-uppercase mb-5">Seu Instrutor</h2>
+          
+            <img class="rounded-circle img-fluid mb-2" src="img/team/gus.jpg">
+            <h6><b>Gustavo Torres</b></h6>
+        
+            <p>Gus cresceu no Capão Redondo, periferia de São Paulo. Estuda Ciências da Computação em Stanford, é bolsista da Fundação Estudar e dá aulas desde seus 13 anos. Trabalhou na Khan Academy, dá monitoria para alunos de Stanford e seu time foi um dos vencedores da Microsoft   Imagine Cup.</p>
+            <p><a class="js-scroll-trigger" href="#team">Conheça todo o time da Hike >></a></p>
           </div>
         </div>
       </div>
@@ -176,31 +261,46 @@
     </section> -->
 
     <section id="testimonials" class="bg-secondary">
-      <div class="container text-center">
-        <h2 class="section-heading">O que os Hikers acham do curso</h2>
-        <!-- <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+      <div class="container-fluid text-center">
+        <h2 class="section-heading text-uppercase mb-5">239 PESSOAS JÁ PASSARAM PELA HIKE</h2>
+        <div id="testimonialCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
           <div class="carousel-inner">
-            <div class="carousel-item active"> -->
+            <div class="carousel-item active">
               <div class="row justify-content-center">
-                <div class="col-lg-9">
+                <div class="col-md-7 col-9">
                   <p>Agradeço muito a vocês pela dedicação em ensinar e sempre disponíveis para solucionar qualquer dúvida que fosse. Estou ainda mais empolgado com o que aprendi e colocarei em prática em novos projetos. O trabalho de vocês está SENSACIONAL! Parabéns!</p>
-                  <img class="rounded-circle" src="img/testimonials/pim.jpeg">
-                  <p>Guilherme Pim</p>
+                  <p>Guilherme P.</p>
                 </div>
               </div>
-            <!-- </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row justify-content-center">
+                <div class="col-md-7 col-9">
+                  <p>“A Hike30 possibilita que pessoa sem conhecimento prévio de programação, como eu, possa desenvolver um aplicativo web em 30 dias, sem sobrecarregar sua rotina para tanto. O suporte para dúvidas é muito eficiente e o material é bem elaborado e de fácil utilização. Fiquei muito satisfeita com a experiência e recomendo!”</p>
+                  <p>Fernanda T.</p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row justify-content-center">
+                <div class="col-md-7 col-9">
+                  <p>O que eu gostei na sua metodologia que achei diferente dos outros cursos é a pegada prática.</p>
+                  <p>Marco A.</p>
+                </div>
+              </div>
+            </div>
           </div>
-          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <a class="carousel-control-prev" href="#testimonialCarousel" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
           </a>
-          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <a class="carousel-control-next" href="#testimonialCarousel" role="button" data-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
           </a>
-        </div>         -->
-        <a class="btn btn-primary btn-xl mt-5 mb-3" mp-mode="dftl" href="https://www.mercadopago.com/mlb/checkout/start?pref_id=333068623-3615bb8c-6d43-4d2f-841f-479055b5ebf8" name="MP-payButton" target="_blank">Inscreva-se</a>
-        <p class="text-white">Inscreva-se agora para a próxima turma por R$249. Início em 16/07! </p>
+        </div>
+      
+        <a class="btn btn-primary btn-xl mt-5 mb-3" href="#" data-toggle="modal" data-target="#signupModal">Inscreva-se</a>
       </div>
     </section>
 
@@ -209,53 +309,41 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h2 class="section-heading">Nóis</h2>
+            <h2 class="text-uppercase">Nóis</h2>
           </div>
         </div>
-        <div class="row">
-          <div class="col-sm-4">
-            <div class="team-member">
-              <img class="mx-auto rounded-circle" src="img/team/1.jpg" alt="">
-              <ul class="list-inline social-buttons">
-                <li class="list-inline-item">
-                  <a href="https://www.linkedin.com/in/gustavotorresgts/" target="_blank">
-                    <h4>Gus</h4>
-                  </a>
-                </li>
-              </ul>
-              <p class="text-muted">Conteúdo</p>
-              <p>Estuda Ciências da Computação em Stanford e trancou a faculdade pra criar a Hike. Embora tenha nascido e crescido no Capão Redondo, nunca viu o Mano Brown.</p>
-            </div>
+        <div class="row justify-content-center align-items-center team-member">
+          <div class="offset-md-1 col-md-2">
+            <img class="mx-auto rounded-circle" src="img/team/gus.jpg" alt="">
           </div>
-          <div class="col-sm-4">
-            <div class="team-member">
-              <img class="mx-auto rounded-circle" src="img/team/2.jpg" alt="">
-              <ul class="list-inline social-buttons">
-                <li class="list-inline-item">
-                  <a href="https://www.linkedin.com/in/joaoaraujoc/" target="_blank">
-                    <h4>Jão</h4>
-                  </a>
-                </li>
-              </ul>
-              <p class="text-muted">Operações</p>
-              <p>Estuda arquitetura no Mackenzie e também trancou a faculdade pra criar a Hike. Se a Hike não der certo, ele não sabe direito o que vai fazer da vida (mas, afinal de contas, quem é que sabe?).</p>
-              <p></p>
-            </div>
+          <div class="col-md-8">
+            <h4><a href="https://www.linkedin.com/in/gustavotorresgts/" target="_blank">Gus</a></h4>
+            <p class="text-muted">Criação de Conteúdo</p>
+            <p>Gus estuda Ciências da Computação em Stanford e trancou a faculdade pra criar a Hike. Embora tenha nascido e crescido no Capão Redondo, nunca viu o Mano Brown.</p>
+            <p>É bolsista da Fundação Estudar e dá aulas desde seus 13 anos. Trabalhou na Khan Academy, dá monitoria para alunos de Stanford e seu time foi um dos vencedores da Microsoft Imagine Cup em 2017.</p>
           </div>
-          <div class="col-sm-4">
-            <div class="team-member">
-              <img class="mx-auto rounded-circle" src="img/team/3.jpg" alt="">
-              <ul class="list-inline social-buttons">
-                <a href="https://www.linkedin.com/in/abrantesarthur/" target="_blank">
-                  <li class="list-inline-item">
-                    <h4>Tutu</h4>
-                  </li>
-                </a>
-              </ul>
-              <p class="text-muted">Vendas</p>
-              <p>Cresceu no interior de Minas e passou em 7 universidades americanas. Hoje estuda Ciências da Computação em Harvard, mas nós achamos que a maior conquista dele na verdade foi ter ido no Faustão.</p>
-            </div>
+        </div>
+        <div class="row justify-content-center align-items-center team-member">
+          <div class="offset-md-1 col-md-2">
+            <img class="mx-auto rounded-circle" src="img/team/tutu.jpg" alt="">
           </div>
+          <div class="col-md-8">
+            <h4><a href="https://www.linkedin.com/in/abrantesarthur/" target="_blank">Tutu</a></h4>
+            <p class="text-muted">Mentoria & Acompanhamento</p>
+            <p>Cresceu no interior de Minas e passou em 7 universidades dos EUA. Hoje estuda Ciências da Computação em Harvard, mas nós achamos que a maior conquista dele na verdade foi ter ido no Faustão.</p>
+            <p>Dá aulas de Matemática em Harvard e também é bolsista da Fundação Estudar. Em 2016, recebeu a Medalha da Inconfidência, o mais importante prêmio concedido pelo Estado de Minas Gerais.</p>
+          </div>
+        </div>
+        <div class="row justify-content-center align-items-center team-member">
+          <div class="offset-md-1 col-md-2">
+            <img class="mx-auto rounded-circle" src="img/team/jao.jpg" alt="">
+          </div>
+          <div class="col-md-8">
+                <h4><a href="https://www.linkedin.com/in/joaoaraujoc/" target="_blank">Jão</a></h4>
+              <p class="text-muted">Experiência do Usuário</p>
+              <p>Estuda arquitetura no Mackenzie e também trancou a faculdade pra criar a Hike. Se a Hike não der certo, ele não sabe direito o que vai fazer da vida (mas, afinal de contas, quem é que sabe?)</p>
+              <p>Aos 17 anos, foi representante do Brasil no Fórum Civil dos BRICS na Rússia. Mais recentemente, foi um dos cinco brasileiros escolhidos entre 16 mil candidatos para ser embaixador da Brazil Conference at Harvard & MIT 2018.</p>
+            </div>
         </div>
       </div>
     </section>
@@ -311,12 +399,7 @@
     <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
     <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
 
-    <script type="text/javascript">
-    (function(){function $MPC_load(){window.$MPC_loaded !== true && (function(){var s = document.createElement("script");s.type = "text/javascript";s.async = true;s.src = document.location.protocol+"//secure.mlstatic.com/mptools/render.js";var x = document.getElementsByTagName('script')[0];x.parentNode.insertBefore(s, x);window.$MPC_loaded = true;})();}window.$MPC_loaded !== true ? (window.attachEvent ?window.attachEvent('onload', $MPC_load) : window.addEventListener('load', $MPC_load, false)) : null;})();
-    </script>
-
     <!-- Custom scripts for this template -->
     <script src="js/creative.min.js"></script>
-
   </body>
 </html>

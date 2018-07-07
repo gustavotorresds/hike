@@ -58,5 +58,54 @@
     distance: '0px'
   }, 300);
 
+  $("#signup-form").submit(function(e){
+    console.log('HERE');
+    e.preventDefault();
+    submitSubscribeForm($("#signup-form"), $("#signup-success"));
+  });
+
+  function submitSubscribeForm($form, $resultElement) {
+        $.ajax({
+            type: "GET",
+            url: "https://hikeacademy.us17.list-manage.com/subscribe/post-json?u=5bfcd8d110b98b14d9ca89ce3&amp;id=e9773b005f&c=?",
+            data: $form.serialize(),
+            cache: false,
+            dataType: "json",
+            contentType: "application/json; charset=utf-8",
+
+            error: function(error){},
+
+            success: function(data){
+                if (data.result != "success") {
+                    $("#signup-info").css("display", "block");
+                    var message = data.msg || "Desculpe, algo deu errado. Tente novamente mais tarde.";
+
+                    if (data.msg) {
+                      if (data.msg.indexOf("already subscribed") >= 0) {
+                        message = "Você já se inscreveu. Obrigado! Entraremos em contato em breve :)";
+                      } else if (data.msg.indexOf("Please enter a value") >= 0) {
+                        message = "Os campos são todos obrigatórios. Por favor, preencha-os novamente.";
+                      } else if (data.msg.indexOf("too many") >= 0) {
+                        message = "Tivemos muitas inscrições vindo desse e-mail.";
+                      }
+                    }
+
+                    $("#signup-info").html('<p>' + message + '</p>');
+                } else {
+                    $("#signup-info").css("display", "none");
+                    $("#signup-success").css("display", "block");
+                    $form.css("display", "none");
+                    $("#signup-success").html('<i class="fa fa-check-circle-o"></i><p class="mt-3">Obrigado pela inscrição! Mandaremos e-mail para você em breve com informações sobre os próximos passos para se juntar à Hike :)</p>');
+                }
+            }
+        });
+    }
+
+    $('#signupModal').on('hidden.bs.modal', function (e) {
+      // do something...
+      $("#signup-form").css("display", "block");
+      $("#signup-success").css("display", "none");
+      $("#signup-info").css("display", "none");
+    })
 
 })(jQuery); // End of use strict
