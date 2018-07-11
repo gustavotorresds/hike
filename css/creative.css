@@ -48,19 +48,6 @@ a:hover {
   }
 }
 
-#about {
-  -webkit-clip-path: polygon(0 2%,100% 0,100% 100%,0 98%);
-  clip-path: polygon(0% 2%, 100% 0,100% 100%,0 98%);
-  font-size: 1.1rem;
-}
-
-@media (min-width: 992px) {
-  #about {
-    -webkit-clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 95%);
-    clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 95%);
-  }
-}
-
 #features {
   -webkit-clip-path: polygon(0 2%,100% 0,100% 100%,0 98%);
   clip-path: polygon(0% 2%, 100% 0,100% 100%,0 98%);
@@ -210,9 +197,6 @@ img::-moz-selection {
 header.masthead {
   padding-top: 8rem;
   padding-bottom: calc(6rem - 56px);
-  /*background-size: cover;
-  background-image: url("../img/hero11.png");
-  background-position: center center;*/
 }
 
 header.masthead hr {
@@ -246,7 +230,6 @@ header.masthead p {
 
 @media (min-width: 992px) {
   header.masthead {
-    background-image: url("../img/hero10.png");
     min-height: 730px;
   }
 }
@@ -255,7 +238,6 @@ header.masthead p {
   font-weight: 700;
   text-transform: uppercase;
   border: none;
-  /*border-radius: 300px;*/
   font-size: 15pt;
 }
 
@@ -334,7 +316,6 @@ header.masthead p {
 }
 
 #instructor {
-  /*background-color: #F3F3F3;*/
   padding: 3rem 0;
 }
 
@@ -368,6 +349,13 @@ header.masthead p {
 
 .team-member p {
   margin-top: 0;
+  margin-bottom: 0;
+}
+
+.team-member ul {
+  margin: 0;
+  padding: 0;
+  text-align: left;
 }
 
 #credits {
