@@ -14,7 +14,7 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Se você sempre quis aprender a programar mas não sabe por onde começar, você está no lugar certo.">
+    <meta name="description" content="Se você sempre quis aprender a programar mas não sabe por onde começar, está no lugar certo.">
     <meta name="author" content="Hike Academy">
 
     <title>Hike Academy</title>
@@ -33,6 +33,7 @@
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> -->
 
     <link rel="shortcut icon" type="image/x-icon" href="icon.ico" />
   </head>
@@ -58,6 +59,9 @@
               <a class="nav-link js-scroll-trigger" href="#testimonials">Depoimentos</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#faq">FAQ</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#contact">Contato</a>
             </li>
             <li class="nav-item subscribe-button">
@@ -81,19 +85,20 @@
             <!-- Begin MailChimp Signup Form -->
             <div id="mc-hike-signup">
               <form action="https://hikeacademy.us17.list-manage.com/subscribe/post-json?u=5bfcd8d110b98b14d9ca89ce3&amp;id=e9773b005f" method="post" id="signup-form" name="mc-embedded-subscribe-form" class="validate mb-4" novalidate>
+                <p class="text-muted">Oi :) Assim que preencher esse formulário, vamos te enviar um e-mail com mais informações sobre a Hike e sobre como participar.</p>
                 <div>
                   <!-- <div class="indicates-required"><span class="asterisk">*</span> indica campo obrigatório</div> -->
                   <div class="mc-field-group form-group">
                     <label for="mce-EMAIL">Email*</label>
-                    <input type="email" value="" name="EMAIL" class="required email form-control" id="mce-EMAIL" placeholder="fulana@hikeacademy.com.br">
+                    <input type="email" value="" name="EMAIL" class="required email form-control" id="mce-EMAIL" placeholder="fulana@gmail.com">
                   </div>
                   <div class="mc-field-group form-group">
                     <label for="mce-FNAME">Nome*</label>
                     <input type="text" value="" name="FNAME" class="form-control" id="mce-FNAME" placeholder="Fulana de Tal">
                   </div>
                   <div class="mc-field-group form-group">
-                    <label for="mce-PHONE">WhatsApp*</label>
-                    <input type="tel" name="PHONE" class="form-control" value="" id="mce-PHONE" placeholder="(11) 91234-5678">
+                    <label for="mce-PHONE">WhatsApp (opcional)</label>
+                    <input type="tel" name="PHONE" class="form-control" value="" id="mce-PHONE" placeholder="(99) 99999-9999">
                   </div>
                   <div class="mc-field-group mt-4 mb-4">
                     <strong>Quero aprender a programar para:*</strong>
@@ -110,7 +115,7 @@
                     <div class="response" id="mce-success-response" style="display:none"></div>
                   </div> -->    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
                   <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_5bfcd8d110b98b14d9ca89ce3_e9773b005f" tabindex="-1" value=""></div>
-                  <div class="text-center"><input type="submit" value="Enviar" name="subscribe" id="mc-embedded-subscribe" class="btn btn-primary btn-block"></div>
+                  <div class="text-center"><input type="submit" value="Enviar" name="subscribe" id="mc-embedded-subscribe" class="btn btn-secondary btn-block"></div>
                 </div>
               </form>
             </div>
@@ -128,20 +133,24 @@
     </div>
 
     <header class="masthead" id="header">
-      <div class="container-fluid text-center">
-        <!-- <div class="row">
-          <div class="col-lg-8 mx-auto">
-            <img class="img-fluid" src="img/logo.png">
-          </div>
-        </div> -->
-        <div class="row justify-content-around align-items-center">
-          <div class="col-md-4">
+      <div class="container-fluid">
+        <div class="row align-items-center">
+          <div class="col-md-4 offset-md-1 col-12">
             <h1 class="mb-4">APRENDA A PROGRAMAR EM 30 DIAS</h1>
-            <p class="mb-2">Se você sempre quis aprender a programar mas não sabe por onde começar, você está no lugar certo.</p>
-            <a class="btn btn-primary btn-xl btn-block js-scroll-trigger mt-3" href="#" data-toggle="modal" data-target="#signupModal">Quero!</a>
+            <p class="mb-4">Se você sempre quis aprender a programar mas não sabe por onde começar, está no lugar certo.</p>
+
+            <div class="row justify-content-start mb-5">
+              <div class="col-12">
+                <a class="btn btn-block btn-primary js-scroll-trigger mt-3" href="#" data-toggle="modal" data-target="#signupModal">Inscreva-se</a>
+              </div>
+              <div class="col-12">
+                <a class="btn btn-block btn-outline js-scroll-trigger mt-3" href="#about">Saber mais</a>
+              </div>
+            </div>
           </div>
-          <div class="col-md-5 d-none d-md-block">
-            <img class="img-fluid" src="img/hero2.jpg" alt="Hero Image">
+        
+          <div class="col-md-7 col-12">
+            <img class="img-fluid" src="img/hero12.png">
           </div>
         </div>
       </div>
@@ -160,7 +169,21 @@
               <p>Com uma dedicação de 2 a 3 horas por semana, em 30 dias você deixará de ser um iniciante e terá aprendido a criar seus próprios Websites!</p>
             </div>
 
-            <a class="btn btn-primary btn-xl mt-5 mb-3" href="#" data-toggle="modal" data-target="#signupModal">Inscreva-se</a>
+            <a class="btn btn-secondary mt-5 mb-3" href="#" data-toggle="modal" data-target="#signupModal">Inscreva-se</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="partners">
+      <div class="container text-center">
+        <h2 class="section-heading text-uppercase mb-5">Empresas que <span class="red"><i class="fa fa-heart"></i></span> a Hike</h2>
+        <div class="row justify-content-center align-items-end">
+          <div class="col-md-2 col-6">
+            <img class="img-fluid" src="img/partners/cubo.png">
+          </div>
+          <div class="col-md-2 col-6">
+            <img class="img-fluid" src="img/partners/mobly.jpg">
           </div>
         </div>
       </div>
@@ -197,16 +220,8 @@
       </div>
     </section> -->
 
-    <section id="video">
+    <section id="features" class="bg-secondary">
       <div class="container">
-        <div class="row mx-auto text-center justify-content-center">
-          <div class="col-lg-8">
-            <h2 class="section-heading text-uppercase mb-5">CONHEÇA O PROGRAMA</h2>
-            <div class="embed-responsive embed-responsive-16by9 mb-5">
-              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Al15IUHqcEQ?rel=0" allowfullscreen></iframe>
-            </div>
-          </div>
-        </div>
         <div class="row justify-content-center align-items-start text-center">
           <div class="col-md-4 col-sm-12">
             <div class="icon-container">
@@ -235,11 +250,16 @@
 
     <section id="instructor">
       <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-md-5 text-center">
-            <h2 class="text-uppercase mb-5">Seu Instrutor</h2>
-          
-            <img class="rounded-circle img-fluid mb-2" src="img/team/gus.jpg">
+        <h2 class="text-uppercase mb-5 text-center">Seu Instrutor</h2>
+        <div class="row mx-auto justify-content-center align-items-center">
+          <div class="col-md-8">
+            <div class="embed-responsive embed-responsive-16by9 mb-5">
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Al15IUHqcEQ?rel=0" allowfullscreen></iframe>
+            </div>
+          </div>
+        
+          <div class="col-md-4">
+            <!-- <img class="rounded-circle img-fluid mb-2" src="img/team/gus.jpg"> -->
             <h6><b>Gustavo Torres</b></h6>
         
             <p>Gus cresceu no Capão Redondo, periferia de São Paulo. Estuda Ciências da Computação em Stanford, é bolsista da Fundação Estudar e dá aulas desde seus 13 anos. Trabalhou na Khan Academy, dá monitoria para alunos de Stanford e seu time foi um dos vencedores da Microsoft   Imagine Cup.</p>
@@ -260,7 +280,7 @@
       </div>
     </section> -->
 
-    <section id="testimonials" class="bg-secondary">
+    <section id="testimonials" class="bg-primary">
       <div class="container-fluid text-center">
         <h2 class="section-heading text-uppercase mb-5">239 PESSOAS JÁ PASSARAM PELA HIKE</h2>
         <div id="testimonialCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
@@ -284,7 +304,7 @@
             <div class="carousel-item">
               <div class="row justify-content-center">
                 <div class="col-md-7 col-9">
-                  <p>O que eu gostei na sua metodologia que achei diferente dos outros cursos é a pegada prática.</p>
+                  <p>Desde o primeiro dia gostei muito da forma da Hike30 de trabalhar, a equipe deu todo o suporte e disponibilidade necessárias. Consegui colocar em prática os conhecimentos muito rapidamente através de uma abordagem de ensino MUITO prática. Recomendo!!!</p>
                   <p>Marco A.</p>
                 </div>
               </div>
@@ -300,7 +320,77 @@
           </a>
         </div>
       
-        <a class="btn btn-primary btn-xl mt-5 mb-3" href="#" data-toggle="modal" data-target="#signupModal">Inscreva-se</a>
+        <a class="btn btn-secondary mt-5 mb-3" href="#" data-toggle="modal" data-target="#signupModal">Inscreva-se</a>
+      </div>
+    </section>
+
+    <!--FAQ-->
+    <section id="faq">
+      <div class="container mb-5">
+        <div class="row">
+          <div class="col-12 mb-4 text-center">
+            <h3 class="mt-5"><b>PERGUNTAS FREQUENTES</b></h3>
+            <hr>
+          </div>
+        </div>
+
+        <div class="row justify-content-center mb-3">
+          <div class="col-lg-10">
+            <div class="question">
+              <button class="accordion">Quanto custa?
+                  <svg class="chevron ml3 fill-silver" width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"><g stroke-width="0" fill="#000000" fill-rule="evenodd"><path d="M29.2617603,20.9995621 C29.1409175,20.9995621 29.018601,20.9662302 28.9051266,20.8962332 L16,12.7865884 L3.09487336,20.8962332 C2.73971342,21.1178902 2.29023716,20.9728966 2.09276235,20.5712475 C1.89528753,20.1695984 2.02349879,19.6612873 2.37865872,19.4379638 L15.6418927,11.1049954 C15.8644203,10.9650015 16.1355797,10.9650015 16.3581073,11.1049954 L29.6213413,19.4379638 C29.9765012,19.6612873 30.1047125,20.1679318 29.9072377,20.5712475 C29.7731316,20.8445688 29.5211302,20.9995621 29.2617603,20.9995621"></path></g></svg>
+              </button>
+              <div class="panel">
+                <p>R$ 249 para ter acesso a todo conteúdo do curso por 1 ano. Você pode parcelar esse valor em até 3x sem juros na hora do pagamento.</p>
+              </div>
+            </div>
+
+            <div class="question">
+              <button class="accordion">O que eu vou aprender?
+                <svg class="chevron ml3 fill-silver" width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"><g stroke-width="0" fill="#000000" fill-rule="evenodd"><path d="M29.2617603,20.9995621 C29.1409175,20.9995621 29.018601,20.9662302 28.9051266,20.8962332 L16,12.7865884 L3.09487336,20.8962332 C2.73971342,21.1178902 2.29023716,20.9728966 2.09276235,20.5712475 C1.89528753,20.1695984 2.02349879,19.6612873 2.37865872,19.4379638 L15.6418927,11.1049954 C15.8644203,10.9650015 16.1355797,10.9650015 16.3581073,11.1049954 L29.6213413,19.4379638 C29.9765012,19.6612873 30.1047125,20.1679318 29.9072377,20.5712475 C29.7731316,20.8445688 29.5211302,20.9995621 29.2617603,20.9995621"></path></g></svg>
+              </button>
+              <div class="panel">
+                <p>Durante os 30 dias, você aprenderá Web full stack (front-end e back-end). Ou seja, você vai aprender como montar sites do começo ao fim, desde criar um botão até construir a base de dados. Isso acontece ao longo da construção de um projeto, que é uma rede social. Com esse projeto, você vai aprender HTML, CSS, JavaScript e algumas ferramentas muito populares em programação, como Git, Github e Heroku. Faremos isso usando o Meteor, um dos frameworks de JavaScript mais usados no mundo.</p>
+              </div>
+            </div>
+
+            <div class="question">
+              <button class="accordion">Nunca programei na vida ou tenho pouca experiência. Esse curso é pra mim?
+                <svg class="chevron ml3 fill-silver" width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"><g stroke-width="0" fill="#000000" fill-rule="evenodd"><path d="M29.2617603,20.9995621 C29.1409175,20.9995621 29.018601,20.9662302 28.9051266,20.8962332 L16,12.7865884 L3.09487336,20.8962332 C2.73971342,21.1178902 2.29023716,20.9728966 2.09276235,20.5712475 C1.89528753,20.1695984 2.02349879,19.6612873 2.37865872,19.4379638 L15.6418927,11.1049954 C15.8644203,10.9650015 16.1355797,10.9650015 16.3581073,11.1049954 L29.6213413,19.4379638 C29.9765012,19.6612873 30.1047125,20.1679318 29.9072377,20.5712475 C29.7731316,20.8445688 29.5211302,20.9995621 29.2617603,20.9995621"></path></g></svg>
+              </button>
+              <div class="panel">
+                <p>Sim! A Hike foi feita para quem está começando do zero: não se preocupe se você nunca escreveu uma linha de código; em 30 dias você terá aprendido a criar seus próprios Websites.</p>
+              </div>
+            </div>
+
+            <div class="question">
+              <button class="accordion">É tudo online?
+                <svg class="chevron ml3 fill-silver" width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"><g stroke-width="0" fill="#000000" fill-rule="evenodd"><path d="M29.2617603,20.9995621 C29.1409175,20.9995621 29.018601,20.9662302 28.9051266,20.8962332 L16,12.7865884 L3.09487336,20.8962332 C2.73971342,21.1178902 2.29023716,20.9728966 2.09276235,20.5712475 C1.89528753,20.1695984 2.02349879,19.6612873 2.37865872,19.4379638 L15.6418927,11.1049954 C15.8644203,10.9650015 16.1355797,10.9650015 16.3581073,11.1049954 L29.6213413,19.4379638 C29.9765012,19.6612873 30.1047125,20.1679318 29.9072377,20.5712475 C29.7731316,20.8445688 29.5211302,20.9995621 29.2617603,20.9995621"></path></g></svg>
+              </button>
+              <div class="panel">
+                <p>Sim!</p>
+              </div>
+            </div>
+
+            <div class="question">
+              <button class="accordion">Quanto tempo de dedicação?
+                <svg class="chevron ml3 fill-silver" width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"><g stroke-width="0" fill="#000000" fill-rule="evenodd"><path d="M29.2617603,20.9995621 C29.1409175,20.9995621 29.018601,20.9662302 28.9051266,20.8962332 L16,12.7865884 L3.09487336,20.8962332 C2.73971342,21.1178902 2.29023716,20.9728966 2.09276235,20.5712475 C1.89528753,20.1695984 2.02349879,19.6612873 2.37865872,19.4379638 L15.6418927,11.1049954 C15.8644203,10.9650015 16.1355797,10.9650015 16.3581073,11.1049954 L29.6213413,19.4379638 C29.9765012,19.6612873 30.1047125,20.1679318 29.9072377,20.5712475 C29.7731316,20.8445688 29.5211302,20.9995621 29.2617603,20.9995621"></path></g></svg>
+              </button>
+              <div class="panel">
+                <p>Prevemos uma dedicação de 2 a 3 horas por semana para terminar o curso em um mês. Entretanto, você é livre para se dedicar quanto quiser. O curso demanda cerca de ~12h, ou seja, se você for uma pessoa super motivada, pode até terminar tudo em um só dia!</p>
+              </div>
+            </div>
+
+            <div class="question">
+              <button class="accordion">Vocês oferecem suporte para dúvidas?
+                <svg class="chevron ml3 fill-silver" width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"><g stroke-width="0" fill="#000000" fill-rule="evenodd"><path d="M29.2617603,20.9995621 C29.1409175,20.9995621 29.018601,20.9662302 28.9051266,20.8962332 L16,12.7865884 L3.09487336,20.8962332 C2.73971342,21.1178902 2.29023716,20.9728966 2.09276235,20.5712475 C1.89528753,20.1695984 2.02349879,19.6612873 2.37865872,19.4379638 L15.6418927,11.1049954 C15.8644203,10.9650015 16.1355797,10.9650015 16.3581073,11.1049954 L29.6213413,19.4379638 C29.9765012,19.6612873 30.1047125,20.1679318 29.9072377,20.5712475 C29.7731316,20.8445688 29.5211302,20.9995621 29.2617603,20.9995621"></path></g></svg>
+              </button>
+              <div class="panel">
+                <p>Sim! Nossa plataforma inclui opção para você postar dúvidas, que serão tiradas por alguém do nosso time.</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -308,42 +398,49 @@
     <section class="bg-light infos" id="team">
       <div class="container">
         <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2 class="text-uppercase">Nóis</h2>
+          <div class="col-lg-12">
+            <h2 class="text-uppercase mb-4 text-center">Nóis</h2>
           </div>
         </div>
-        <div class="row justify-content-center align-items-center team-member">
-          <div class="offset-md-1 col-md-2">
-            <img class="mx-auto rounded-circle" src="img/team/gus.jpg" alt="">
+        <div class="row justify-content-center">
+          <div class="col-md-4 col-12">
+            <p>Somos um time unido pela vontade de contribuir. Viemos das periferias de São Paulo, das cidadezinhas do interior de Minas, de realidades de poucas oportunidades, mas tivemos a sorte de trombar com pessoas que apostaram na gente.</p>
           </div>
-          <div class="col-md-8">
-            <h4><a href="https://www.linkedin.com/in/gustavotorresgts/" target="_blank">Gus</a></h4>
-            <p class="text-muted">Criação de Conteúdo</p>
-            <p>Gus estuda Ciências da Computação em Stanford e trancou a faculdade pra criar a Hike. Embora tenha nascido e crescido no Capão Redondo, nunca viu o Mano Brown.</p>
-            <p>É bolsista da Fundação Estudar e dá aulas desde seus 13 anos. Trabalhou na Khan Academy, dá monitoria para alunos de Stanford e seu time foi um dos vencedores da Microsoft Imagine Cup em 2017.</p>
+          <div class="col-md-4 col-12">
+            <p>Com a aposta dessas pessoas (e, vamos ser honestos, com muito suor), fomos parar nas melhores universidades do Brasil e do mundo, e conhecemos ferramentas poderosas. E daí nasceu a vontade de levar um pouco do que conhecemos para os outros.</p>
           </div>
         </div>
-        <div class="row justify-content-center align-items-center team-member">
-          <div class="offset-md-1 col-md-2">
-            <img class="mx-auto rounded-circle" src="img/team/tutu.jpg" alt="">
-          </div>
-          <div class="col-md-8">
-            <h4><a href="https://www.linkedin.com/in/abrantesarthur/" target="_blank">Tutu</a></h4>
-            <p class="text-muted">Mentoria & Acompanhamento</p>
-            <p>Cresceu no interior de Minas e passou em 7 universidades dos EUA. Hoje estuda Ciências da Computação em Harvard, mas nós achamos que a maior conquista dele na verdade foi ter ido no Faustão.</p>
-            <p>Dá aulas de Matemática em Harvard e também é bolsista da Fundação Estudar. Em 2016, recebeu a Medalha da Inconfidência, o mais importante prêmio concedido pelo Estado de Minas Gerais.</p>
-          </div>
-        </div>
-        <div class="row justify-content-center align-items-center team-member">
-          <div class="offset-md-1 col-md-2">
-            <img class="mx-auto rounded-circle" src="img/team/jao.jpg" alt="">
-          </div>
-          <div class="col-md-8">
-                <h4><a href="https://www.linkedin.com/in/joaoaraujoc/" target="_blank">Jão</a></h4>
-              <p class="text-muted">Experiência do Usuário</p>
-              <p>Estuda arquitetura no Mackenzie e também trancou a faculdade pra criar a Hike. Se a Hike não der certo, ele não sabe direito o que vai fazer da vida (mas, afinal de contas, quem é que sabe?)</p>
-              <p>Aos 17 anos, foi representante do Brasil no Fórum Civil dos BRICS na Rússia. Mais recentemente, foi um dos cinco brasileiros escolhidos entre 16 mil candidatos para ser embaixador da Brazil Conference at Harvard & MIT 2018.</p>
+        <div class="row justify-content-center text-center">
+          <div class="col-md-3">
+            <div class="card mb-3">
+              <div class="card-body team-member text-center">
+                <img class="mx-auto rounded-circle" src="img/team/gus.jpg" alt="">
+                <h4>Gus</h4>
+                <p class="text-muted">Criação de Conteúdo</p>
+                <a href="https://www.linkedin.com/in/gustavotorresgts/" target="_blank"><i class="fa fa-linkedin"></i></a>
+              </div>
             </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card mb-3">
+              <div class="card-body team-member text-center">
+                <img class="mx-auto rounded-circle" src="img/team/jao.jpg" alt="">
+                <h4>Jão</h4>
+                <p class="text-muted">Experiência do Usuário</p>
+                <a href="https://www.linkedin.com/in/joaoaraujoc/" target="_blank" ><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card mb-3">
+              <div class="card-body team-member text-center">
+                <img class="mx-auto rounded-circle" src="img/team/tutu.jpg" alt="">
+                <h4>Tutu</h4>
+                <p class="text-muted">Mentoria</p>
+                <a href="https://www.linkedin.com/in/abrantesarthur/" target="_blank"><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

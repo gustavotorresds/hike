@@ -65,47 +65,67 @@
   });
 
   function submitSubscribeForm($form, $resultElement) {
-        $.ajax({
-            type: "GET",
-            url: "https://hikeacademy.us17.list-manage.com/subscribe/post-json?u=5bfcd8d110b98b14d9ca89ce3&amp;id=e9773b005f&c=?",
-            data: $form.serialize(),
-            cache: false,
-            dataType: "json",
-            contentType: "application/json; charset=utf-8",
+    $.ajax({
+        type: "GET",
+        url: "https://hikeacademy.us17.list-manage.com/subscribe/post-json?u=5bfcd8d110b98b14d9ca89ce3&amp;id=e9773b005f&c=?",
+        data: $form.serialize(),
+        cache: false,
+        dataType: "json",
+        contentType: "application/json; charset=utf-8",
 
-            error: function(error){},
+        error: function(error){},
 
-            success: function(data){
-                if (data.result != "success") {
-                    $("#signup-info").css("display", "block");
-                    var message = data.msg || "Desculpe, algo deu errado. Tente novamente mais tarde.";
+        success: function(data){
+            if (data.result != "success") {
+                $("#signup-info").css("display", "block");
+                var message = data.msg || "Desculpe, algo deu errado. Tente novamente mais tarde.";
 
-                    if (data.msg) {
-                      if (data.msg.indexOf("already subscribed") >= 0) {
-                        message = "Você já se inscreveu. Obrigado! Entraremos em contato em breve :)";
-                      } else if (data.msg.indexOf("Please enter a value") >= 0) {
-                        message = "Os campos são todos obrigatórios. Por favor, preencha-os novamente.";
-                      } else if (data.msg.indexOf("too many") >= 0) {
-                        message = "Tivemos muitas inscrições vindo desse e-mail.";
-                      }
-                    }
-
-                    $("#signup-info").html('<p>' + message + '</p>');
-                } else {
-                    $("#signup-info").css("display", "none");
-                    $("#signup-success").css("display", "block");
-                    $form.css("display", "none");
-                    $("#signup-success").html('<i class="fa fa-check-circle-o"></i><p class="mt-3">Obrigado pela inscrição! Mandaremos e-mail para você em breve com informações sobre os próximos passos para se juntar à Hike :)</p>');
+                if (data.msg) {
+                  if (data.msg.indexOf("already subscribed") >= 0) {
+                    message = "Você já se inscreveu. Obrigado! Entraremos em contato em breve :)";
+                  } else if (data.msg.indexOf("Please enter a value") >= 0) {
+                    console.log("MSG: ", data.msg);
+                    message = "Os campos são todos obrigatórios. Por favor, preencha-os novamente.";
+                  } else if (data.msg.indexOf("too many") >= 0) {
+                    message = "Tivemos muitas inscrições vindo desse e-mail.";
+                  }
                 }
-            }
-        });
-    }
 
-    $('#signupModal').on('hidden.bs.modal', function (e) {
-      // do something...
-      $("#signup-form").css("display", "block");
-      $("#signup-success").css("display", "none");
-      $("#signup-info").css("display", "none");
-    })
+                $("#signup-info").html('<p>' + message + '</p>');
+            } else {
+                $("#signup-info").css("display", "none");
+                $("#signup-success").css("display", "block");
+                $form.css("display", "none");
+                $("#signup-success").html('<i class="fa fa-check-circle-o"></i><p class="mt-3">Obrigado pela inscrição! Mandaremos e-mail para você em breve com informações sobre os próximos passos para se juntar à Hike :)</p>');
+            }
+        }
+    });
+  }
+
+  $('#signupModal').on('hidden.bs.modal', function (e) {
+    // do something...
+    $("#signup-form").css("display", "block");
+    $("#signup-success").css("display", "none");
+    $("#signup-info").css("display", "none");
+  });
+
+  var acc = document.getElementsByClassName("accordion");
+  var i;
+
+  for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+          /* Toggle between adding and removing the "active" class,
+          to highlight the button that controls the panel */
+          this.classList.toggle("active");
+
+          /* Toggle between hiding and showing the active panel */
+          var panel = this.nextElementSibling;
+          if (panel.style.display === "block") {
+              panel.style.display = "none";
+          } else {
+              panel.style.display = "block";
+          }
+      });
+  }
 
 })(jQuery); // End of use strict
