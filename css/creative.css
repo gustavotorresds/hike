@@ -358,19 +358,6 @@ header.masthead p {
   text-align: left;
 }
 
-#credits {
-  margin: 0;
-  padding-bottom: 15px;
-}
-
-.footer {
-    width: 100%;
-    background-color: #373737;
-    color: white;
-    text-align: center;
-    font-size: 8pt;
-}
-
 .mc-body {
   background-color: white;
   display: flex;
@@ -497,6 +484,38 @@ header.masthead p {
   transform: rotate(360deg);
 }
 
+#contact {
+  padding: 3rem 0;
+}
+
 .no-padding {
   padding: 0;
+}
+
+.footer {
+    width: 100%;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+}
+
+.footer .border {
+  border-top: 1px solid white;
+  margin-bottom: 10px;
+}
+
+.footer .fa {
+  color: white;
+  font-size: 20px;
+  margin: 0 5px;
+}
+
+.footer .fa:hover {
+  color: #D8D8D8;
+  transition: .1s;
+  cursor: pointer;
+}
+
+.footer .social {
+  padding-bottom: 20px;
 }
