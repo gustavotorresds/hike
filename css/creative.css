@@ -484,6 +484,10 @@ header.masthead p {
   transform: rotate(360deg);
 }
 
+#courses .card-title {
+  margin: 0;
+}
+
 #contact {
   padding: 3rem 0;
 }
@@ -504,13 +508,13 @@ header.masthead p {
   margin-bottom: 10px;
 }
 
-.footer .fa {
+.footer i {
   color: white;
   font-size: 20px;
   margin: 0 5px;
 }
 
-.footer .fa:hover {
+.footer i:hover {
   color: #D8D8D8;
   transition: .1s;
   cursor: pointer;
