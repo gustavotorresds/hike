@@ -206,13 +206,13 @@ header.masthead hr {
 
 /*header text*/
 header.masthead h1 {
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   font-weight: bold;
 }
 
 header.masthead p {
   color: #666666;
-  font-size: 14pt;
+  font-size: 1.2rem;
 }
 
 @media (min-width: 768px) {
@@ -409,20 +409,20 @@ header.masthead p {
   cursor: pointer;
 }
 
-#signup-form ul {
+#mc-embedded-subscribe-form ul {
   list-style: none;
 }
 
-#signup-success {
+#form-success {
   display: none;
 }
 
-#signup-info {
+#form-info {
   display: none;
   color: green;
 }
 
-#signup-success i {
+#form-success i {
   color: #3498db;
   font-size: 46pt;
 }
@@ -503,9 +503,10 @@ header.masthead p {
     font-size: 12px;
 }
 
-.footer .border {
-  border-top: 1px solid white;
+.footer-border {
+  border-bottom: 1px solid white;
   margin-bottom: 10px;
+  border-width: thin;
 }
 
 .footer i {

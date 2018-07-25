@@ -1,6 +1,44 @@
 (function($) {
   "use strict"; // Start of use strict
 
+  var idToURL = {
+    'signup': 'https://hikeacademy.us17.list-manage.com/subscribe/post-json?u=5bfcd8d110b98b14d9ca89ce3&amp;id=e9773b005f&c=?',
+    'interest-data-science': 'https://hikeacademy.us17.list-manage.com/subscribe/post-json?u=5bfcd8d110b98b14d9ca89ce3&amp;id=328b96fc6a&c=?',
+    'interest-vba': 'https://hikeacademy.us17.list-manage.com/subscribe/post-json?u=5bfcd8d110b98b14d9ca89ce3&amp;id=6762c50ac9&c=?',
+    'interest-mobile': 'https://hikeacademy.us17.list-manage.com/subscribe/post-json?u=5bfcd8d110b98b14d9ca89ce3&amp;id=a29147bc07&c=?',
+    'interest-excel': 'https://hikeacademy.us17.list-manage.com/subscribe/post-json?u=5bfcd8d110b98b14d9ca89ce3&amp;id=2eee51aa50&c=?'
+  };
+
+  var idToForm = {
+    'signup': `<p class="text-muted">Oi :) Assim que preencher esse formulário, vamos te enviar um e-mail com mais informações sobre a Hike e sobre como participar.</p>
+                <div>
+                  <div class="mc-field-group form-group">
+                    <label for="mce-EMAIL">Email*</label>
+                    <input type="email" value="" name="EMAIL" class="required email form-control" id="mce-EMAIL" placeholder="fulana@gmail.com">
+                  </div>
+                  <div class="mc-field-group form-group">
+                    <label for="mce-FNAME">Nome*</label>
+                    <input type="text" value="" name="FNAME" class="form-control" id="mce-FNAME" placeholder="Fulana de Tal">
+                  </div>
+                  <div class="mc-field-group form-group">
+                    <label for="mce-PHONE">WhatsApp (opcional)</label>
+                    <input type="tel" name="PHONE" class="form-control" value="" id="mce-PHONE" placeholder="(99) 99999-9999">
+                  </div>
+                  <div class="mc-field-group mt-4 mb-4">
+                    <strong>Quero aprender a programar para:*</strong>
+                    <div class="form-check"><input type="radio" class="form-check-input" value="Usar no meu trabalho" name="INTEREST" id="mce-INTEREST-0"><label class="form-check-label" for="mce-INTEREST-0">Usar no meu trabalho</label></div>
+                    <div class="form-check"><input type="radio" class="form-check-input" value="Impulsionar carreira" name="INTEREST" id="mce-INTEREST-1"><label class="form-check-label" for="mce-INTEREST-1">Impulsionar carreira</label></div>
+                    <div class="form-check"><input type="radio" class="form-check-input" value="Usar na faculdade" name="INTEREST" id="mce-INTEREST-2"><label class="form-check-label" for="mce-INTEREST-2">Usar na faculdade</label></div>
+                    <div class="form-check"><input type="radio" class="form-check-input" value="Construir ideia própria" name="INTEREST" id="mce-INTEREST-3"><label class="form-check-label" for="mce-INTEREST-3">Construir ideia própria</label></div>
+                    <div class="form-check"><input type="radio" class="form-check-input" value="Desenvolver raciocínio" name="INTEREST" id="mce-INTEREST-4"><label class="form-check-label" for="mce-INTEREST-4">Desenvolver raciocínio</label></div>
+                    <div class="form-check"><input type="radio" class="form-check-input" value="Por curiosidade" name="INTEREST" id="mce-INTEREST-5"><label class="form-check-label" for="mce-INTEREST-5">Por curiosidade</label></div>
+                    <div class="form-check"><input type="radio" class="form-check-input" value="Outro" name="INTEREST" id="mce-INTEREST-6"><label for="mce-INTEREST-6" class="form-check-label">Outro</label></div>
+                  </div>`,
+    'interest': `<p class="text-muted">Deixe seu e-mail para que te enviemos novidades quando lançarmos esse curso. Pode ser até que você ganhe uns descontos também :)</p><div class="form-group">
+                    <input type="email" value="" name="EMAIL" class="email form-control" id="mce-EMAIL" placeholder="Email" required>
+                  </div>`
+  }
+
   // Smooth scrolling using jQuery easing
   $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
@@ -58,16 +96,31 @@
     distance: '0px'
   }, 300);
 
-  $("#signup-form").submit(function(e){
+  $('.form-toggle').on('click', function(e) {
+    $('#signupModal').modal('show');
+
+    let actionType = e.target.attributes['data-target'].value;
+
+    console.log(actionType);
+
+    $('#mc-embedded-subscribe-form').attr('action', idToURL[actionType]);
+    if(actionType === 'signup') {
+      $('#form-fields').html(idToForm['signup']);
+    } else {
+      $('#form-fields').html(idToForm['interest']);
+    }
+  });
+
+  $("#mc-embedded-subscribe-form").submit(function(e){
     console.log('HERE');
     e.preventDefault();
-    submitSubscribeForm($("#signup-form"), $("#signup-success"));
+    submitSubscribeForm($("#mc-embedded-subscribe-form"), $("#form-success"));
   });
 
   function submitSubscribeForm($form, $resultElement) {
     $.ajax({
         type: "GET",
-        url: "https://hikeacademy.us17.list-manage.com/subscribe/post-json?u=5bfcd8d110b98b14d9ca89ce3&amp;id=e9773b005f&c=?",
+        url: $form.attr('action'),
         data: $form.serialize(),
         cache: false,
         dataType: "json",
@@ -77,7 +130,7 @@
 
         success: function(data){
             if (data.result != "success") {
-                $("#signup-info").css("display", "block");
+                $("#form-info").css("display", "block");
                 var message = data.msg || "Desculpe, algo deu errado. Tente novamente mais tarde.";
 
                 if (data.msg) {
@@ -91,12 +144,12 @@
                   }
                 }
 
-                $("#signup-info").html('<p>' + message + '</p>');
+                $("#form-info").html('<p>' + message + '</p>');
             } else {
-                $("#signup-info").css("display", "none");
-                $("#signup-success").css("display", "block");
+                $("#form-info").css("display", "none");
+                $("#form-success").css("display", "block");
                 $form.css("display", "none");
-                $("#signup-success").html('<i class="fa fa-check-circle-o"></i><p class="mt-3">Obrigado pela inscrição! Mandaremos e-mail para você em breve com informações sobre os próximos passos para se juntar à Hike :)</p>');
+                $("#form-success").html('<i class="fa fa-check-circle-o"></i><p class="mt-3">Obrigado pela inscrição! Mandaremos e-mail para você em breve com informações sobre os próximos passos para se juntar à Hike :)</p>');
             }
         }
     });
@@ -104,9 +157,9 @@
 
   $('#signupModal').on('hidden.bs.modal', function (e) {
     // do something...
-    $("#signup-form").css("display", "block");
-    $("#signup-success").css("display", "none");
-    $("#signup-info").css("display", "none");
+    $("#mc-embedded-subscribe-form").css("display", "block");
+    $("#form-success").css("display", "none");
+    $("#form-info").css("display", "none");
   });
 
   var acc = document.getElementsByClassName("accordion");
